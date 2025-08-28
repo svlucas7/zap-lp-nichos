@@ -1,19 +1,11 @@
-# Zap Gráfica - Landing Page Profissional
+# Zap Gráfica - Landing Page
 
-Landing page moderna, responsiva e otimizada para a Zap Gráfica, criada com Next.js, Tailwind CSS, Framer Motion e Heroicons.
+Landing page moderna, responsiva e otimizada para a Zap Gráfica, criada com HTML, Tailwind CSS via CDN e JavaScript puro.
 
-## Principais recursos
-- Layout moderno e responsivo
-- Animações profissionais
-- Ícones Heroicons
-- Integração com WhatsApp
-- SEO otimizado
-- Pronto para deploy no Vercel ou Netlify
-
-## Scripts
-- `npm run dev` — inicia o servidor de desenvolvimento
-- `npm run build` — gera o build de produção
-- `npm run start` — inicia o servidor de produção
+## Estrutura
+- `public/index.html`: página principal
+- Sem dependências de Node.js, React ou Next.js
+- Pronto para deploy em Netlify ou qualquer serviço de hospedagem estática
 
 ## Deploy
-Configure o diretório de publicação para `out` (caso use export estático) ou padrão Next.js (`.next`).
+Basta apontar o diretório de publicação para `public` no Netlify.
