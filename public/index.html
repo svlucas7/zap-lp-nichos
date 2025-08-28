@@ -6,132 +6,222 @@
   <title>Zap Gráfica - Nichos</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
   <link rel="icon" href="https://zapgrafica.com.br/favicon.ico" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #232021 0%, #272325 100%);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+    }
+
+    /* Custom color classes */
+    .zap-green { background-color: #00d355; color: #272325; }
+    .zap-green-text { color: #00d355; }
+    .zap-gray { background-color: #272325; color: #fff; }
+    .zap-gray-text { color: #272325; }
+    .zap-border { border-color: #00d355; }
+
+    /* Card styles */
+    .zap-card {
+      background: linear-gradient(135deg, #232021 60%, #272325 100%);
+      color: #fff;
+      box-shadow: 0 4px 32px 0 rgba(0,0,0,0.25), 0 1.5px 6px 0 rgba(0, 211, 85, 0.2);
+      border-radius: 1.25rem;
+      border: 1px solid #232021;
+      transition: all 0.3s ease;
+    }
+    .zap-card:hover {
+      box-shadow: 0 8px 40px 0 rgba(0, 211, 85, 0.6), 0 1.5px 6px 0 rgba(0, 211, 85, 0.2);
+      transform: translateY(-4px) scale(1.02);
+    }
+
+    /* Icon styles */
+    .zap-card-icon {
+      background: radial-gradient(circle, #00d355 60%, #00b84c 100%);
+      color: #272325;
+      box-shadow: 0 2px 8px rgba(0, 211, 85, 0.3);
+    }
+
+    /* Button styles */
+    .zap-btn {
+      background: linear-gradient(90deg, #00d355 60%, #00b84c 100%);
+      color: #272325;
+      border-radius: 9999px;
+      box-shadow: 0 2px 8px rgba(0, 211, 85, 0.3);
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+    .zap-btn:hover {
+      background: linear-gradient(90deg, #00b84c 60%, #00d355 100%);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(0, 211, 85, 0.6);
+      transform: translateY(-2px);
+    }
+
+    /* Glow effect */
+    .glow {
+      box-shadow: 0 0 80px 20px rgba(0, 211, 85, 0.3), 0 0 40px 10px rgba(0, 184, 76, 0.2);
+    }
+
+    /* Section background */
+    .section-bg {
+      background: linear-gradient(135deg, #232021 60%, #272325 100%);
+      border-radius: 2rem;
+      box-shadow: 0 2px 24px rgba(35, 32, 33, 0.6);
+    }
+
+    /* Gradient text */
+    .gradient-text {
+      background: linear-gradient(90deg, #00d355 40%, #00b84c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .zap-card:hover {
+        transform: none;
+      }
+      .zap-btn:hover {
+        transform: none;
+      }
+    }
+  </style>
 </head>
-<body class="bg-[#272325] text-white font-sans">
+<body>
   <!-- Hero Section -->
-  <section class="flex flex-col items-center justify-center py-16 px-4 text-center bg-[#00d355] text-[#272325]">
-    <h1 class="text-3xl md:text-5xl font-bold mb-4">ENCONTRE O SEU NICHO E PERSONALIZE COMO QUISER!</h1>
-    <p class="text-lg md:text-2xl mb-6">Com apenas um clique, conheça a categoria perfeita para o seu negócio</p>
-    <a href="https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21" target="_blank" class="bg-[#272325] text-[#00d355] px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:bg-[#00b84c] hover:text-white transition-colors duration-200">Fale com a Zap pelo WhatsApp</a>
+  <section id="hero" class="flex flex-col items-center justify-center py-20 px-4 text-center section-bg glow mb-12">
+    <div class="mb-4">
+      <span class="inline-block px-4 py-1 rounded-full bg-green-500 bg-opacity-20 text-green-400 font-semibold text-sm tracking-wide">Zap Gráfica</span>
+    </div>
+    <h1 class="text-4xl md:text-6xl font-extrabold mb-4 gradient-text">ENCONTRE O SEU NICHO E PERSONALIZE COMO QUISER!</h1>
+    <p class="text-lg md:text-2xl mb-8 text-gray-200">Com apenas um clique, conheça a categoria perfeita para o seu negócio</p>
+    <a href="https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21" target="_blank" class="zap-btn px-10 py-4 font-bold text-lg shadow-lg">Fale com a Zap pelo WhatsApp</a>
   </section>
 
   <!-- Opções Section -->
   <section class="py-12 px-4">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-2">Procurando algo diferente?</h2>
-      <p class="mb-4">Veja tudo o que temos em linhas e produtos:</p>
-      <a href="https://zapgrafica.netlify.app/" target="_blank" class="inline-block mb-6 text-[#00d355] font-semibold hover:underline">Ver catálogo completo</a>
-      <ul class="flex flex-wrap justify-center gap-3 mb-2">
-        <li class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] transition-colors duration-200">Comunicação</li>
-        <li class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] transition-colors duration-200">Promocional</li>
-        <li class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] transition-colors duration-200">Brindes</li>
-        <li class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] transition-colors duration-200">Tecidos</li>
-        <li class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] transition-colors duration-200">Embalagens</li>
-        <li class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] transition-colors duration-200">Atacado</li>
-        <li class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] transition-colors duration-200">Rótulos</li>
-        <li class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] transition-colors duration-200">Digital</li>
-      </ul>
+    <div class="max-w-3xl mx-auto text-center section-bg p-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2 gradient-text">Procurando algo diferente?</h2>
+      <p class="mb-4 text-gray-300">Veja tudo o que temos em linhas e produtos:</p>
+      <a href="https://zapgrafica.netlify.app/" target="_blank" class="inline-block zap-green-text font-semibold hover:underline mb-6">Ver catálogo completo</a>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="zap-btn px-4 py-2 rounded-full font-medium">Comunicação</span>
+        <span class="zap-btn px-4 py-2 rounded-full font-medium">Promocional</span>
+        <span class="zap-btn px-4 py-2 rounded-full font-medium">Brindes</span>
+        <span class="zap-btn px-4 py-2 rounded-full font-medium">Tecidos</span>
+        <span class="zap-btn px-4 py-2 rounded-full font-medium">Embalagens</span>
+        <span class="zap-btn px-4 py-2 rounded-full font-medium">Atacado</span>
+        <span class="zap-btn px-4 py-2 rounded-full font-medium">Rótulos</span>
+        <span class="zap-btn px-4 py-2 rounded-full font-medium">Digital</span>
+      </div>
     </div>
   </section>
 
   <!-- Zap Class Section -->
-  <section class="py-12 px-4 bg-[#232021]">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">Confira nossos conteúdos estratégicos e aumente suas vendas!</h2>
+  <section class="py-12 px-4">
+    <div class="max-w-4xl mx-auto text-center section-bg p-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4 gradient-text">Confira nossos conteúdos estratégicos e aumente suas vendas!</h2>
       <div class="grid md:grid-cols-3 gap-6 mb-6">
-        <a href="https://www.youtube.com/watch?v=mp274wRc2dY&list=PLnrtPPaEQLUFqoDGQDzo27WRp3hP_M7F7&index=17" target="_blank" class="bg-[#272325] rounded-lg p-4 flex flex-col items-center shadow hover:scale-105 transition-transform duration-200">
+        <a href="https://www.youtube.com/watch?v=mp274wRc2dY&list=PLnrtPPaEQLUFqoDGQDzo27WRp3hP_M7F7&index=17" target="_blank" class="zap-card p-4 flex flex-col items-center">
           <img src="https://img.youtube.com/vi/mp274wRc2dY/hqdefault.jpg" alt="Como vender mais com a Zap Gráfica" class="rounded mb-2 w-full h-32 object-cover" />
-          <span class="font-semibold text-[#00d355]">Como vender mais com a Zap Gráfica</span>
+          <span class="font-semibold zap-green-text">Como vender mais com a Zap Gráfica</span>
         </a>
-        <a href="https://www.youtube.com/watch?v=Wa1VNYyE0QY&list=PLnrtPPaEQLUFqoDGQDzo27WRp3hP_M7F7&index=7" target="_blank" class="bg-[#272325] rounded-lg p-4 flex flex-col items-center shadow hover:scale-105 transition-transform duration-200">
+        <a href="https://www.youtube.com/watch?v=Wa1VNYyE0QY&list=PLnrtPPaEQLUFqoDGQDzo27WRp3hP_M7F7&index=7" target="_blank" class="zap-card p-4 flex flex-col items-center">
           <img src="https://img.youtube.com/vi/Wa1VNYyE0QY/hqdefault.jpg" alt="Dicas para impulsionar seu negócio" class="rounded mb-2 w-full h-32 object-cover" />
-          <span class="font-semibold text-[#00d355]">Dicas para impulsionar seu negócio</span>
+          <span class="font-semibold zap-green-text">Dicas para impulsionar seu negócio</span>
         </a>
-        <a href="https://www.youtube.com/watch?v=Sdp6k_Z-sSY" target="_blank" class="bg-[#272325] rounded-lg p-4 flex flex-col items-center shadow hover:scale-105 transition-transform duration-200">
+        <a href="https://www.youtube.com/watch?v=Sdp6k_Z-sSY" target="_blank" class="zap-card p-4 flex flex-col items-center">
           <img src="https://img.youtube.com/vi/Sdp6k_Z-sSY/hqdefault.jpg" alt="Como usar o portfólio Zap" class="rounded mb-2 w-full h-32 object-cover" />
-          <span class="font-semibold text-[#00d355]">Como usar o portfólio Zap</span>
+          <span class="font-semibold zap-green-text">Como usar o portfólio Zap</span>
         </a>
-        <div class="bg-[#272325] rounded-lg p-4 flex flex-col items-center justify-center shadow">
-          <span class="font-semibold text-[#00d355] mb-2">Vídeo de orçamento ainda em edição com o Matheus</span>
-          <span class="text-xs text-gray-400">Em breve</span>
-        </div>
       </div>
-      <a href="https://www.youtube.com/watch?v=cEuwqewUBuw&list=PLnrtPPaEQLUFqoDGQDzo27WRp3hP_M7F7" target="_blank" class="inline-block text-[#00d355] font-semibold hover:underline">Ver playlist completa</a>
+      <div class="zap-card p-4 flex flex-col items-center justify-center md:col-span-3">
+        <span class="font-semibold zap-green-text mb-2">Vídeo de orçamento ainda em edição com o Matheus</span>
+        <span class="text-xs text-gray-400">Em breve</span>
+      </div>
+      <a href="https://www.youtube.com/watch?v=cEuwqewUBuw&list=PLnrtPPaEQLUFqoDGQDzo27WRp3hP_M7F7" target="_blank" class="inline-block zap-green-text font-semibold hover:underline mt-4">Ver playlist completa</a>
     </div>
   </section>
 
   <!-- Kit de Amostras Section -->
   <section class="py-12 px-4">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-2">KIT DE AMOSTRAS</h2>
-      <p class="mb-4">Mostre, convença e conquiste: o mostruário que vende por você.</p>
-      <a href="https://www.zapgrafica.com.br/home/categoria/amostra-parceiro-zap/parceiro-zap" target="_blank" class="bg-[#00d355] text-[#272325] px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:bg-[#00b84c] hover:text-white transition-colors duration-200">Garanta seu kit agora</a>
+    <div class="max-w-3xl mx-auto text-center section-bg p-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2 gradient-text">KIT DE AMOSTRAS</h2>
+      <p class="mb-4 text-gray-300">Mostre, convença e conquiste: o mostruário que vende por você.</p>
+      <a href="https://www.zapgrafica.com.br/home/categoria/amostra-parceiro-zap/parceiro-zap" target="_blank" class="zap-btn px-8 py-3 font-bold text-lg">Garanta seu kit agora</a>
     </div>
   </section>
 
   <!-- Nichos Section -->
-  <section class="py-12 px-4 bg-[#232021]">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Segmentos & Nichos</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <div class="bg-[#272325] rounded-xl p-6 flex flex-col items-center shadow hover:scale-105 transition-transform duration-200">
-          <div class="w-12 h-12 mb-3 bg-[#00d355] rounded-full flex items-center justify-center text-[#272325] font-bold text-xl">E</div>
-          <span class="font-semibold mb-2 text-center">Eventos</span>
-          <a href="https://conteudo.zapgrafica.com.br/nicho-eventos-parceiro" target="_blank" class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] hover:text-white transition-colors duration-200 mt-2">Saiba mais</a>
-        </div>
-        <div class="bg-[#272325] rounded-xl p-6 flex flex-col items-center shadow hover:scale-105 transition-transform duration-200">
-          <div class="w-12 h-12 mb-3 bg-[#00d355] rounded-full flex items-center justify-center text-[#272325] font-bold text-xl">R</div>
-          <span class="font-semibold mb-2 text-center">Rótulos</span>
-          <a href="https://conteudo.zapgrafica.com.br/nicho-rotulos-parceiro" target="_blank" class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] hover:text-white transition-colors duration-200 mt-2">Saiba mais</a>
-        </div>
-        <div class="bg-[#272325] rounded-xl p-6 flex flex-col items-center shadow hover:scale-105 transition-transform duration-200">
-          <div class="w-12 h-12 mb-3 bg-[#00d355] rounded-full flex items-center justify-center text-[#272325] font-bold text-xl">B</div>
-          <span class="font-semibold mb-2 text-center">Brindes</span>
-          <a href="https://conteudo.zapgrafica.com.br/nicho-brindes-parceiro" target="_blank" class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] hover:text-white transition-colors duration-200 mt-2">Saiba mais</a>
-        </div>
-        <div class="bg-[#272325] rounded-xl p-6 flex flex-col items-center shadow hover:scale-105 transition-transform duration-200">
-          <div class="w-12 h-12 mb-3 bg-[#00d355] rounded-full flex items-center justify-center text-[#272325] font-bold text-xl">P</div>
-          <span class="font-semibold mb-2 text-center">Promocional</span>
-          <a href="https://conteudo.zapgrafica.com.br/nicho-promocionais-parceiro" target="_blank" class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] hover:text-white transition-colors duration-200 mt-2">Saiba mais</a>
-        </div>
-        <div class="bg-[#272325] rounded-xl p-6 flex flex-col items-center shadow hover:scale-105 transition-transform duration-200">
-          <div class="w-12 h-12 mb-3 bg-[#00d355] rounded-full flex items-center justify-center text-[#272325] font-bold text-xl">T</div>
-          <span class="font-semibold mb-2 text-center">Tecidos</span>
-          <a href="https://conteudo.zapgrafica.com.br/nicho-tecidos-parceiro" target="_blank" class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] hover:text-white transition-colors duration-200 mt-2">Saiba mais</a>
-        </div>
-        <div class="bg-[#272325] rounded-xl p-6 flex flex-col items-center shadow hover:scale-105 transition-transform duration-200">
-          <div class="w-12 h-12 mb-3 bg-[#00d355] rounded-full flex items-center justify-center text-[#272325] font-bold text-xl">C</div>
-          <span class="font-semibold mb-2 text-center">Comunicação</span>
-          <a href="https://conteudo.zapgrafica.com.br/nicho-comunicacao-parceiro" target="_blank" class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] hover:text-white transition-colors duration-200 mt-2">Saiba mais</a>
-        </div>
-        <div class="bg-[#272325] rounded-xl p-6 flex flex-col items-center shadow hover:scale-105 transition-transform duration-200">
-          <div class="w-12 h-12 mb-3 bg-[#00d355] rounded-full flex items-center justify-center text-[#272325] font-bold text-xl">D</div>
-          <span class="font-semibold mb-2 text-center">Digital</span>
-          <a href="https://conteudo.zapgrafica.com.br/nicho-digital-parceiro" target="_blank" class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] hover:text-white transition-colors duration-200 mt-2">Saiba mais</a>
-        </div>
-        <div class="bg-[#272325] rounded-xl p-6 flex flex-col items-center shadow hover:scale-105 transition-transform duration-200">
-          <div class="w-12 h-12 mb-3 bg-[#00d355] rounded-full flex items-center justify-center text-[#272325] font-bold text-xl">E</div>
-          <span class="font-semibold mb-2 text-center">Embalagens</span>
-          <a href="https://conteudo.zapgrafica.com.br/nicho-embalagens-parceiro" target="_blank" class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] hover:text-white transition-colors duration-200 mt-2">Saiba mais</a>
-        </div>
-        <div class="bg-[#272325] rounded-xl p-6 flex flex-col items-center shadow hover:scale-105 transition-transform duration-200">
-          <div class="w-12 h-12 mb-3 bg-[#00d355] rounded-full flex items-center justify-center text-[#272325] font-bold text-xl">A</div>
-          <span class="font-semibold mb-2 text-center">Atacado</span>
-          <a href="https://conteudo.zapgrafica.com.br/nicho-atacado-parceiro" target="_blank" class="bg-[#00d355] text-[#272325] px-4 py-2 rounded-full font-medium shadow hover:bg-[#00b84c] hover:text-white transition-colors duration-200 mt-2">Saiba mais</a>
-        </div>
+  <section class="py-12 px-4">
+    <div class="max-w-6xl mx-auto section-bg p-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 gradient-text">Segmentos & Nichos</h2>
+      <div id="nichos-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Nichos cards gerados por JS -->
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-8 px-4 bg-[#272325] text-center border-t border-[#00d355]">
+  <footer class="py-8 px-4 zap-gray text-center border-t zap-border section-bg mt-12">
     <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-4">
-      <a href="https://zapgrafica.com.br" target="_blank" class="text-[#00d355] font-semibold hover:underline">Site oficial</a>
-      <a href="https://www.instagram.com/zapgrafica/" target="_blank" class="text-[#00d355] font-semibold hover:underline">Instagram</a>
-      <a href="https://www.facebook.com/zapgrafica/" target="_blank" class="text-[#00d355] font-semibold hover:underline">Facebook</a>
-      <a href="https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21" target="_blank" class="bg-[#00d355] text-[#272325] px-6 py-2 rounded-full font-semibold shadow hover:bg-[#00b84c] hover:text-white transition-colors duration-200">Fale com a Zap pelo WhatsApp</a>
+      <a href="https://zapgrafica.com.br" target="_blank" class="zap-green-text font-semibold hover:underline">Site oficial</a>
+      <a href="https://www.instagram.com/zapgrafica/" target="_blank" class="zap-green-text font-semibold hover:underline">Instagram</a>
+      <a href="https://www.facebook.com/zapgrafica/" target="_blank" class="zap-green-text font-semibold hover:underline">Facebook</a>
+      <a href="https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21" target="_blank" class="zap-btn px-6 py-2 font-bold">Fale com a Zap pelo WhatsApp</a>
     </div>
     <p class="text-sm text-gray-400">© 2025 Zap Gráfica. Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    // Animação simples do hero
+    document.addEventListener('DOMContentLoaded', function() {
+      const hero = document.getElementById('hero');
+      hero.style.opacity = '0';
+      setTimeout(() => {
+        hero.style.transition = 'opacity 1s';
+        hero.style.opacity = '1';
+      }, 200);
+    });
+
+    // Gerar cards de nichos
+    const nichos = [
+      { title: "Eventos", url: "https://conteudo.zapgrafica.com.br/nicho-eventos-parceiro" },
+      { title: "RH", url: "https://conteudo.zapgrafica.com.br/nicho-recursos-humanos-parceiro" },
+      { title: "Escola", url: "https://conteudo.zapgrafica.com.br/nicho-escola-e-ensino-parceiro" },
+      { title: "Hotelaria", url: "https://conteudo.zapgrafica.com.br/produtos-hotelaria" },
+      { title: "Saúde e beleza", url: "https://conteudo.zapgrafica.com.br/nicho-saude" },
+      { title: "Tecnologia", url: "https://conteudo.zapgrafica.com.br/nicho-tecnologia" },
+      { title: "Alimentício", url: "https://conteudo.zapgrafica.com.br/produtos-alimenticio" },
+      { title: "Bebês e crianças", url: "https://conteudo.zapgrafica.com.br/nicho-bebes-e-criancas" },
+      { title: "Sustentáveis", url: "https://conteudo.zapgrafica.com.br/nicho-produtos-sustentaveis" },
+      { title: "Joalheria", url: "https://conteudo.zapgrafica.com.br/nicho-joias-e-relogios" },
+      { title: "Automotivo", url: "https://conteudo.zapgrafica.com.br/nicho-automotivo" },
+      { title: "E-commerce", url: "https://conteudo.zapgrafica.com.br/nicho-servicos-digitais" },
+      { title: "Advocacia", url: "https://conteudo.zapgrafica.com.br/nicho-advocacia" },
+      { title: "Esportes e Fitness", url: "https://conteudo.zapgrafica.com.br/nicho-esportes-e-fitness" },
+      { title: "Petshop", url: "https://conteudo.zapgrafica.com.br/produtos-petshop" },
+      { title: "Casa e decoração", url: "https://conteudo.zapgrafica.com.br/nicho-casa-e-decoracao" },
+      { title: "Turismo", url: "https://conteudo.zapgrafica.com.br/nicho-turismo-e-viagens" },
+      { title: "Móveis e decoração", url: "https://conteudo.zapgrafica.com.br/nicho-moveis" },
+      { title: "Moda", url: "https://conteudo.zapgrafica.com.br/nicho-moda-e-acessorios" },
+      { title: "Cerimonial", url: "http://zapcerimonial.netlify.app/" },
+    ];
+
+    const nichosGrid = document.getElementById('nichos-grid');
+    nichos.forEach(nicho => {
+      const card = document.createElement('div');
+      card.className = "zap-card p-6 flex flex-col items-center hover:scale-105 transition-transform duration-200";
+      card.innerHTML = `
+        <div class="w-12 h-12 mb-3 zap-card-icon rounded-full flex items-center justify-center font-bold text-xl">${nicho.title.charAt(0)}</div>
+        <span class="font-semibold mb-2 text-center">${nicho.title}</span>
+        <a href="${nicho.url}" target="_blank" class="zap-btn px-4 py-2 rounded-full font-medium mt-2">Saiba mais</a>
+      `;
+      nichosGrid.appendChild(card);
+    });
+  </script>
 </body>
 </html>
