@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zap Gráfica - Transforme suas ideias em resultados reais</title>
+    <meta name="description" content="Impressão profissional, comunicação visual e soluções gráficas completas. Mais de 6 diferenciais exclusivos para impulsionar seu negócio.">
+    <link rel="icon" href="assets/images/FAVICON.jpg" type="image/jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00d355',
+                        secondary: '#00AEEF',
+                        dark: '#231F20',
+                        light: '#F8FAFC',
+                        gray: {
+                            50: '#F8FAFC',
+                            100: '#F1F5F9',
+                            200: '#E2E8F0',
+                            300: '#CBD5E1',
+                            400: '#94A3B8',
+                            500: '#64748B',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1E293B',
+                            900: '#0F172A'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in-down': 'fadeInDown 0.6s ease-out',
+                        'fade-in-left': 'fadeInLeft 0.6s ease-out',
+                        'fade-in-right': 'fadeInRight 0.6s ease-out',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'bounce-slow': 'bounce 2s infinite'
+                    }
+                }
+            }
+        }
+    </script>
+                <!-- Scroll animation: smooth and slightly faster -->
+                <style>
+                    /* Initial state: slightly offset and transparent */
+                    .scroll-animate {
+                        opacity: 0;
+                        transform: translateY(12px);
+                        transition: opacity .28s ease-out, transform .28s ease-out;
+                        will-change: opacity, transform;
+                    }
+                    /* Visible state */
+                    .scroll-animate.in-view {
+                        opacity: 1;
+                        transform: none;
+                    }
+                                                /* Adjust card inner spacing: slightly compact to reduce card height */
+                                                #produtos .grid > a,
+                                                #produtos .grid > div {
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    gap: 0.75rem;
+                                                    padding: 1.25rem; /* more compact */
+                                                }
+                                                /* Reduce image height so cards are shorter */
+                                                #produtos .grid > a img,
+                                                #produtos .grid > div img {
+                                                    max-height: 9rem; /* ~144px */
+                                                    width: auto;
+                                                    object-fit: contain;
+                                                }
+                                                /* Keep a small space below the image */
+                                                #produtos .grid > a .relative,
+                                                #produtos .grid > div .relative {
+                                                    margin-bottom: 0.5rem;
+                                                }
+                                /* Align 'Saiba mais' link to the bottom of the card */
+                                #produtos .grid > a .text-primary {
+                                    margin-top: auto;
+                                    align-self: flex-start; /* keep link left-aligned */
+                                }
+                </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPSZZTBT3X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YPSZZTBT3X');
+    </script>
+    <!-- End Google tag (gtag.js) -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TF7T39MB');</script>
+    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="src/css/style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1001326878"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-1001326878');
+    </script>
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF7T39MB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-100 transition-all duration-300">
+        <nav class="container mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center">
+                        <img src="assets/images/MARCA_ZAPGRAFICA_1COR_VERDE_CMYK-01.png" alt="Zap Gráfica" class="h-10 w-auto">
+                    </a>
+                </div>                  <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#produtos" class="text-gray-600 hover:text-primary font-medium transition-colors duration-200">Produtos</a>
+                    <a href="#vantagens" class="text-gray-600 hover:text-primary font-medium transition-colors duration-200">Por que Zap?</a>
+                    <a href="#processo" class="text-gray-600 hover:text-primary font-medium transition-colors duration-200">Como Funciona</a>
+                    <div class="h-6 w-px bg-gray-300"></div>
+                    <a href="https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21"
+                       onclick="return gtag_report_conversion('https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21');"
+                       target="_blank" class="whatsapp-btn magnetic group bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-full font-semibold transition-all duration-200 shadow-lg shadow-green-600/25 hover:shadow-green-600/40 hover:scale-105 flex items-center">
+                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a href="#contato" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full font-semibold transition-all duration-200 shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105">
+                        Solicitar Orçamento
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100">            <div class="px-6 py-4 space-y-4">
+                <a href="#produtos" class="block text-gray-600 hover:text-primary font-medium">Produtos</a>
+                <a href="#vantagens" class="block text-gray-600 hover:text-primary font-medium">Por que Zap?</a>
+                <a href="#processo" class="block text-gray-600 hover:text-primary font-medium">Como Funciona</a>
+                <a href="https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21"
+                   onclick="return gtag_report_conversion('https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21');"
+                   href="https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21" target="_blank" class="whatsapp-btn magnetic group bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold text-center transition-all duration-200 flex items-center justify-center">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                    </svg>
+                    Transforme suas ideias em resultados reais
+                </a>
+                <a href="#contato" class="block bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full font-semibold text-center transition-all duration-200">
+                    Solicitar Orçamento
+                </a>
+            </div>
+        </div>
+    </header>    <!-- Hero Section -->
+    <main>
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, #231F20, #2a2628, #231F20);">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23231F20" fill-opacity="0.25"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-60"></div>
+
+            <!-- Cursor-follow background (subtle radial glow) -->
+            <div id="hero-cursor-bg" class="absolute inset-0 pointer-events-none" style="z-index:0;"></div>
+            
+            <!-- Floating Elements -->
+            <div class="absolute top-20 left-10 w-20 h-20 rounded-full blur-xl animate-pulse-slow parallax-blob" data-depth="0.035" style="background-color: rgba(35, 31, 32, 0.8);"></div>
+            <div class="absolute bottom-20 right-10 w-32 h-32 rounded-full blur-xl animate-pulse-slow parallax-blob" data-depth="0.025" style="background-color: rgba(35, 31, 32, 0.7);"></div>
+            <div class="absolute top-1/2 left-1/4 w-16 h-16 rounded-full blur-lg animate-bounce-slow parallax-blob" data-depth="0.04" style="background-color: rgba(35, 31, 32, 0.6);"></div>
+
+            <div class="container mx-auto px-6 lg:px-8 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <!-- badge removido conforme solicitado -->
+
+                    <!-- Main Headline -->
+                    <h1 class="text-5xl lg:text-7xl font-black text-white mb-6 leading-tight scroll-animate" data-delay="100">
+                        Encontre seu nicho e
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">personalize como quiser</span>
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 scroll-animate" data-delay="500">
+                <div class="animate-bounce">
+                    <svg class="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                    </svg>
+                </div>
+            </div>        </section>        <!-- Products Section -->
+    <!-- Conteúdos Estratégicos removed (reinserted elsewhere) -->
+
+        <section id="produtos" class="py-24 lg:py-32 bg-gray-50">
+            <div class="container mx-auto px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="max-w-3xl mx-auto text-center mb-20 scroll-animate">
+                    <div class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold text-sm mb-6">
+                        🎯 Portfólio Completo
+                    </div>
+                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">👉 Escolha seu segmento e personalize como quiser. <span class="text-primary">Encontre tudo em um único lugar!</span></h2>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Eventos -->
+                    <a href="https://conteudo.zapgrafica.com.br/nicho-eventos-parceiro" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="100">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa E-ventos.png" alt="Eventos" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Eventos</h3>
+                        <p class="text-gray-600 mb-4">Credenciais, banners, lonas, brindes e kits para ações presenciais e híbridas.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- RH -->
+                    <a href="https://conteudo.zapgrafica.com.br/nicho-recursos-humanos-parceiro" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="200">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa RH.png" alt="RH" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">RH</h3>
+                        <p class="text-gray-600 mb-4">Crachás, manuais, kits de boas-vindas e material para treinamento e integração.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Escola -->
+                    <a href="https://conteudo.zapgrafica.com.br/nicho-escola-e-ensino-parceiro" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="300">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa Escolas.png" alt="Escola" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Escola</h3>
+                        <p class="text-gray-600 mb-4">Material didático, uniformes, banners e kits escolares personalizados.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Hotelaria -->
+                    <a href="https://conteudo.zapgrafica.com.br/produtos-hotelaria" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="400">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa Hotelaria.png" alt="Hotelaria" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Hotelaria</h3>
+                        <p class="text-gray-600 mb-4">Sinalização, etiquetas, amenities e embalagens com identidade visual do estabelecimento.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Saúde e Beleza -->
+                    <a href="https://conteudo.zapgrafica.com.br/nicho-saude" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="500">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/CAPA SAUDE.png" alt="Saúde e Beleza" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Saúde e Beleza</h3>
+                        <p class="text-gray-600 mb-4">Rótulos, embalagens e brindes para clínicas, salões e franquias do setor.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Tecnologia -->
+                    <a href="https://conteudo.zapgrafica.com.br/nicho-tecnologia" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="600">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/CAPA TECNOLOGIA.png" alt="Tecnologia" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Tecnologia</h3>
+                        <p class="text-gray-600 mb-4">Kits promocionais, etiquetas e embalagens para lançamentos e eventos de tech.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Alimentício -->
+                    <a href="https://conteudo.zapgrafica.com.br/produtos-alimenticio" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="700">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/CAPA ALIMENTOS.png" alt="Alimentício" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Alimentício</h3>
+                        <p class="text-gray-600 mb-4">Embalagens, rótulos e displays para food service, delivery e produtos embalados.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Bebês e Crianças -->
+                    <a href="https://conteudo.zapgrafica.com.br/nicho-bebes-e-criancas" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="800">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa Bebês.png" alt="Bebês e Crianças" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Bebês e Crianças</h3>
+                        <p class="text-gray-600 mb-4">Produtos seguros e personalizados para maternidades, lojas infantis e festas infantis.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Sustentáveis -->
+                    <a href="https://conteudo.zapgrafica.com.br/nicho-produtos-sustentaveis" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="900">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa Sustentabilidade.png" alt="Sustentáveis" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Sustentáveis</h3>
+                        <p class="text-gray-600 mb-4">Linha eco-friendly: papéis reciclados, embalagens sustentáveis e brindes conscientes.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Joalheria -->
+                    <a href="https://conteudo.zapgrafica.com.br/nicho-joias-e-relogios" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="1000">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa Joalheria.png" alt="Joalheria" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Joalheria</h3>
+                        <p class="text-gray-600 mb-4">Embalagens e rótulos sofisticados para joias e relógios, com opções premium.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Automotivo -->
+                    <a href="https://conteudo.zapgrafica.com.br/nicho-automotivo" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="1100">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa AUTOMOTIVO.png" alt="Automotivo" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Automotivo</h3>
+                        <p class="text-gray-600 mb-4">Adesivos, faixas, rótulos e materiais para frotas, concessionárias e eventos automotivos.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- E-commerce -->
+                    <a href="https://conteudo.zapgrafica.com.br/nicho-servicos-digitais" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="1200">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa E-commerce.png" alt="E-commerce" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">E-commerce</h3>
+                        <p class="text-gray-600 mb-4">Etiquetas, embalagens de envio, manuais e materiais promocionais para lojas online.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Advocacia -->
+                    <a href="https://conteudo.zapgrafica.com.br/nicho-advocacia" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="1300">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa Advocacia.png" alt="Advocacia" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Advocacia</h3>
+                        <p class="text-gray-600 mb-4">Papelaria fina, pastas, cartões e materiais institucionais para escritórios e tribunais.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Esportes e Fitness -->
+                    <a href="https://conteudo.zapgrafica.com.br/nicho-esportes-e-fitness" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="1400">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa Fitness.png" alt="Esportes e Fitness" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Esportes e Fitness</h3>
+                        <p class="text-gray-600 mb-4">Uniformes, banners, faixas e materiais promocionais para academias e eventos esportivos.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Petshop -->
+                    <a href="https://conteudo.zapgrafica.com.br/produtos-petshop" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="1500">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa PETSHOP.png" alt="Petshop" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Petshop</h3>
+                        <p class="text-gray-600 mb-4">Rótulos, caixas, embalagens e brindes para pet shops e marcas de produtos animais.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Casa e Decoração -->
+                    <a href="https://conteudo.zapgrafica.com.br/nicho-casa-e-decoracao" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="1600">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa Casa e decoração.png" alt="Casa e Decoração" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Casa e Decoração</h3>
+                        <p class="text-gray-600 mb-4">Etiquetas, embalagens e materiais promocionais para móveis, décor e vendas B2C.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Turismo -->
+                    <a href="https://conteudo.zapgrafica.com.br/nicho-turismo-e-viagens" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="1700">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa Turismo.png" alt="Turismo" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Turismo</h3>
+                        <p class="text-gray-600 mb-4">Materiais para agências, hotéis e operadores: folhetos, mapas, etiquetas e embalagens.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Móveis e Decoração -->
+                    <a href="https://conteudo.zapgrafica.com.br/nicho-moveis" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="1800">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa Móveis.png" alt="Móveis e Decoração" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Móveis e Decoração</h3>
+                        <p class="text-gray-600 mb-4">Etiquetas, tags, embalagens e catálogos para lojas e fabricantes de móveis.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Moda -->
+                    <a href="https://conteudo.zapgrafica.com.br/nicho-moda-e-acessorios" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="1900">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa Moda.png" alt="Moda" class="max-h-36 sm:max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Moda</h3>
+                        <p class="text-gray-600 mb-4">Etiquetas, swing tags, embalagens e materiais de PDV para marcas de moda e acessórios.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+
+                    <!-- Cerimonial -->
+                    <a href="http://zapcerimonial.netlify.app/" target="_blank" data-tilt data-tilt-max="6" class="group block bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 scroll-animate" data-delay="2000">
+                        <div class="relative mb-6 rounded-2xl flex items-center justify-center overflow-hidden bg-gray-50">
+                            <img src="assets/images/nichos/Capa E-ventos.png" alt="Cerimonial" class="max-h-44 lg:max-h-52 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Cerimonial</h3>
+                        <p class="text-gray-600 mb-4">Soluções para eventos sociais: convites, lembranças, sinalização e material personalizado.</p>
+                        <span class="text-primary font-semibold hover:underline">Saiba mais →</span>
+                    </a>
+                </div>                <!-- CTA -->
+                <div class="text-center scroll-animate" data-delay="700">
+                    <div class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-8 lg:p-12 text-white">
+                        <h3 class="text-2xl lg:text-3xl font-bold mb-4">Ainda não achou seu produto ideal? Nosso time Comercial resolve pra você.</h3>
+                        <p class="text-lg lg:text-xl mb-8 opacity-90">Estamos à disposição para te atender, não feche sua proposta sem antes falar com o time de especialistas ZAP.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="#contato" class="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105">
+                                Falar com o Comercial
+                            </a>
+                            <a href="https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21"
+                               onclick="return gtag_report_conversion('https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21');"
+                               target="_blank" class="whatsapp-btn magnetic group border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center justify-center">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                            </svg>
+                                WhatsApp Comercial
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conteúdos Estratégicos (user-provided) -->
+        <section id="conteudos-estrategicos" class="py-20 lg:py-28 bg-gray-50">
+            <div class="container mx-auto px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center mb-12 scroll-animate">
+                    <h2 class="text-3xl lg:text-4xl font-black text-gray-900">Conteúdos Estratégicos</h2>
+                    <p class="text-gray-600 mt-3">Aprenda com nossos especialistas: vídeos curtos, práticos e direto ao ponto para aumentar vendas e otimizar sua operação.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto scroll-animate" data-delay="150">
+                    <!-- Video 1 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden group cursor-pointer" onclick="openVideoModal('mp274wRc2dY')">
+                        <img src="https://img.youtube.com/vi/mp274wRc2dY/hqdefault.jpg" alt="Como vender mais" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-gray-900">Como vender mais com embalagens</h3>
+                            <p class="text-gray-600 text-sm mt-2">Técnicas simples para usar embalagens que aumentam a percepção de valor e incentivam a recompra.</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden group cursor-pointer" onclick="openVideoModal('Wa1VNYyE0QY')">
+                        <img src="https://img.youtube.com/vi/Wa1VNYyE0QY/hqdefault.jpg" alt="PDV que converte" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-gray-900">PDV que converte</h3>
+                            <p class="text-gray-600 text-sm mt-2">Modelos e exemplos de materiais para ponto de venda que realmente geram resultado.</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="bg-white rounded-2xl shadow-md overflow-hidden group cursor-pointer" onclick="openVideoModal('Sdp6k_Z-sSY')">
+                        <img src="https://img.youtube.com/vi/Sdp6k_Z-sSY/hqdefault.jpg" alt="Estratégia de brindes" class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg text-gray-900">Estratégia de brindes</h3>
+                            <p class="text-gray-600 text-sm mt-2">Como escolher brindes que fidelizam clientes sem estourar sua margem.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-3xl mx-auto text-center mt-12 scroll-animate" data-delay="300">
+                    <p class="text-gray-700 mb-6">Quer ver todos os conteúdos? Acesse nossa playlist completa ou solicite o kit com materiais exclusivos.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://www.youtube.com/playlist?list=PLnrtPPaEQLUFqoDGQDzo27WRp3hP_M7F7" target="_blank" class="bg-primary text-white px-6 py-3 rounded-full font-semibold magnetic">Acessar playlist Zap Class</a>
+                        <a href="/kit-amostras.pdf" target="_blank" class="border-2 border-primary text-primary px-6 py-3 rounded-full font-semibold">Ver kit de amostras</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="py-24 lg:py-32 bg-white">
+            <div class="container mx-auto px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center mb-16 scroll-animate">
+                    <div class="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm mb-6">
+                        📹 Conheça Nossa História
+                    </div>
+                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+                        Veja como <span class="text-primary">trabalhamos</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        Descubra nossa paixão por qualidade e os bastidores que fazem da Zap Gráfica referência em <strong>excelência e inovação</strong>.
+                    </p>
+                </div>
+                
+                <div class="max-w-5xl mx-auto scroll-animate" data-delay="200">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl cursor-pointer group" onclick="openVideoModal('5ztTHAAi6o4')">
+                        <!-- Thumbnail -->
+                        <img src="https://img.youtube.com/vi/5ztTHAAi6o4/maxresdefault.jpg" 
+                             alt="Conheça a Zap Gráfica" 
+                             class="w-full h-64 lg:h-96 object-cover transition-transform duration-300 group-hover:scale-105">
+                        
+                        <!-- Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 group-hover:from-black/50 transition-all duration-300"></div>
+                        
+                        <!-- Play Button -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-20 h-20 lg:w-24 lg:h-24 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-2xl">
+                                <svg class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        
+                        <!-- Video Info -->
+                        <div class="absolute bottom-6 left-6 right-6 lg:block hidden">
+                            <div class="bg-white/90 backdrop-blur-sm rounded-xl p-4">
+                                <h3 class="text-lg font-bold text-gray-900 mb-1">Conheça a Zap Gráfica</h3>
+                                <p class="text-gray-600 text-sm">Descubra nossa história e compromisso com a qualidade</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA após vídeo -->
+                <div class="text-center mt-12 scroll-animate" data-delay="400">
+                    <p class="text-lg text-gray-600 mb-6">Gostou do que viu? <strong>Vamos conversar!</strong></p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21"
+                        onclick="return gtag_report_conversion('https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21');"
+                           target="_blank" class="whatsapp-btn group bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center justify-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                            </svg>
+                            Quero Trabalhar com Vocês!
+                        </a>
+                        <a href="#contato" class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-primary/30">
+                            Solicitar Orçamento
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reinserted: subheadline + badges + CTAs + social proof (moved from Hero) -->
+        <section class="py-12 lg:py-16 bg-white">
+            <div class="container mx-auto px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto text-center mb-6 scroll-animate" data-delay="100">
+                    <h3 class="text-lg font-semibold text-gray-600 mb-2">Procurando algo diferente?</h3>
+                    <h2 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3">Conheça os <span class="text-primary">8 segmentos</span> da Zap.</h2>
+                    <p class="text-gray-600">Encontre soluções prontas por nicho para acelerar suas vendas e surpreender seus clientes.</p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-3 mb-6 scroll-animate" data-delay="200">
+                    <span class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold">Comunicação</span>
+                    <span class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold">Promocional</span>
+                    <span class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold">Brindes</span>
+                    <span class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold">Tecidos</span>
+                    <span class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold">Embalagens</span>
+                    <span class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold">Atacado</span>
+                    <span class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold">Rótulos</span>
+                    <span class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold">Digital</span>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6 scroll-animate" data-delay="300">
+                    <a href="#vantagens" class="bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-primary/90 transition-all duration-200">Descobrir os 8 Diferenciais</a>
+                    <a href="https://wa.me/+553125666500?text=Quero%20conhecer%20os%208%20segmentos%20da%20Zap" onclick="return gtag_report_conversion('https://wa.me/+553125666500?text=Quero%20conhecer%20os%208%20segmentos%20da%20Zap');" target="_blank" class="whatsapp-btn magnetic group border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-bold transition-all duration-200 inline-flex items-center justify-center">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+                        Falar no WhatsApp
+                    </a>
+                </div>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-8 text-center scroll-animate" data-delay="400">
+                    <div>
+                        <div class="text-2xl font-black text-gray-900">10k+</div>
+                        <div class="text-gray-400 text-sm">Clientes Ativos</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-black text-gray-900">20+</div>
+                        <div class="text-gray-400 text-sm">Anos no Mercado</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-black text-gray-900">8.7/10</div>
+                        <div class="text-gray-400 text-sm">Reputação Reclame Aqui</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vantagens Section -->
+        <section id="vantagens" class="py-24 lg:py-32 bg-white">
+            <div class="container mx-auto px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="max-w-3xl mx-auto text-center mb-20 scroll-animate">
+                    <div class="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm mb-6">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.135 3.135 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.135 3.135 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.135-3.135 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.135-3.135z"></path></svg>
+                        Diferenciais Exclusivos
+                    </div>
+                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+                        Por que a Zap é <span class="text-primary">diferente</span>?
+                    </h2>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        Vamos além da impressão. Oferecemos um ecossistema de soluções que garantem <strong class="text-gray-800">qualidade, agilidade e mais lucro</strong> para o seu negócio.
+                    </p>
+                </div>
+
+                <!-- Accordion Layout -->
+                <div class="max-w-4xl mx-auto" id="diferenciais-accordion">
+                    <!-- Accordion Item 1 -->
+                    <div class="accordion-item scroll-animate" data-delay="100">
+                        <div class="accordion-header">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-5 flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Checagem Garantida</h3>
+                            </div>
+                            <svg class="w-6 h-6 text-gray-500 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-4 px-5">
+                                <p class="text-gray-600 mb-4">Envie seu arquivo em CorelDraw e tenha <strong>100% de garantia</strong> de que estará nos padrões Zap. Nossa checagem automática evita erros comuns e garante uma impressão perfeita.</p>
+                                <ul class="space-y-2 text-gray-700 pl-4 border-l-2 border-primary">
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Ajuste automático de cores, fontes e margens.</span></li>
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Verificação de resolução de imagens para máxima qualidade.</span></li>
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Zero erros no fechamento do arquivo, economizando tempo e dinheiro.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 2 -->
+                    <div class="accordion-item scroll-animate" data-delay="200">
+                        <div class="accordion-header">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-5 flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 4H9m0 4h6M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2zm0 0l6-6"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Calculadora de Preços Inteligente</h3>
+                            </div>
+                            <svg class="w-6 h-6 text-gray-500 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-4 px-5">
+                                <p class="text-gray-600 mb-4">Precifique com <strong>precisão matemática</strong> e aumente sua margem de lucro. Nossa ferramenta exclusiva calcula o preço ideal para você vender aos seus clientes.</p>
+                                <ul class="space-y-2 text-gray-700 pl-4 border-l-2 border-primary">
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Insira seu custo e a margem desejada para obter o preço final.</span></li>
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Compare cenários e encontre a melhor estratégia de precificação.</span></li>
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Mais lucro para você, com transparência e sem complicação.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 3 -->
+                    <div class="accordion-item scroll-animate" data-delay="300">
+                        <div class="accordion-header">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-5 flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Data Evento</h3>
+                            </div>
+                            <svg class="w-6 h-6 text-gray-500 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-4 px-5">
+                                <p class="text-gray-600 mb-4">Controle total sobre prazos críticos com <strong>produção adaptada</strong> para seus eventos. Nunca mais perca uma data importante.</p>
+                                <ul class="space-y-2 text-gray-700 pl-4 border-l-2 border-primary">
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Informe a data do evento e nosso sistema prioriza sua produção.</span></li>
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Acompanhamento em tempo real para garantir a entrega pontual.</span></li>
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Segurança e tranquilidade para os seus projetos mais importantes.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 4 -->
+                    <div class="accordion-item scroll-animate" data-delay="400">
+                        <div class="accordion-header">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-5 flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Arte Virtual Personalizada</h3>
+                            </div>
+                            <svg class="w-6 h-6 text-gray-500 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-4 px-5">
+                                <p class="text-gray-600 mb-4">Sessão <strong>1 a 1 com designer</strong> via Google Meet. Crie ou ajuste sua arte com um especialista, garantindo um resultado profissional sem sair de casa.</p>
+                                <ul class="space-y-2 text-gray-700 pl-4 border-l-2 border-primary">
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Designer dedicado a você para criação ou ajustes.</span></li>
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Atendimento remoto e personalizado via Google Meet.</span></li>
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Ideal para quem não tem um designer ou precisa de ajuda profissional.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 5 -->
+                    <div class="accordion-item scroll-animate" data-delay="500">
+                        <div class="accordion-header">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-5 flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"></path></svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Mídia Própria com Desconto</h3>
+                            </div>
+                            <svg class="w-6 h-6 text-gray-500 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-4 px-5">
+                                <p class="text-gray-600 mb-4">Economize <strong>até 20%</strong> nos seus materiais de divulgação. Use nossos produtos para se promover e ganhe um desconto exclusivo para impulsionar seu negócio.</p>
+                                <ul class="space-y-2 text-gray-700 pl-4 border-l-2 border-primary">
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Desconto progressivo para materiais de auto-divulgação.</span></li>
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Invista na sua marca e economize ao mesmo tempo.</span></li>
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Mais visibilidade para você, com um custo muito menor.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 6 -->
+                    <div class="accordion-item scroll-animate" data-delay="600">
+                        <div class="accordion-header">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-5 flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6c0 0 4-2 8 0s8 0 8 0v12c0 0-4 2-8 0s-8 0-8 0V6z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10c0 0 4-2 8 0s8 0 8 0"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 14c0 0 4-2 8 0s8 0 8 0"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Impressão em Tecidos</h3>
+                            </div>
+                            <svg class="w-6 h-6 text-gray-500 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-4 px-5">
+                                <p class="text-gray-600 mb-4">Camisetas, uniformes, bandeiras, wind banners, materiais para eventos e muito mais</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 7 -->
+                    <div class="accordion-item scroll-animate" data-delay="700">
+                        <div class="accordion-header">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-5 flex-shrink-0">
+                                    <!-- Ícone de Sub Cliente: Pessoa (usuário) -->
+                                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" fill="none" />
+                                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 20v-1a7 7 0 0114 0v1" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Sub Cliente</h3>
+                            </div>
+                            <svg class="w-6 h-6 text-gray-500 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-4 px-5">
+                                <p class="text-gray-600 mb-4">Funcionalidade que permite ao parceiro cadastrar e gerenciar vários clientes dentro do seu painel Zap. Válido apenas para CPF.</p>
+                                <ul class="space-y-2 text-gray-700 pl-4 border-l-2 border-primary">
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Organize e acompanhe pedidos de diferentes clientes em um só lugar.</span></li>
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Gestão facilitada para parceiros que atendem múltiplos clientes.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion Item 8 -->
+                    <div class="accordion-item scroll-animate" data-delay="800">
+                        <div class="accordion-header">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-5 flex-shrink-0">
+                                    <!-- Ícone de Templates & Mockups: Documento com imagem -->
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                                        <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" />
+                                        <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 15l-5-5-4 4-6-6" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Templates & Mockups</h3>
+                            </div>
+                            <svg class="w-6 h-6 text-gray-500 accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="pb-4 px-5">
+                                <p class="text-gray-600 mb-4">São modelos prontos de arte gráfica e simulações realistas dos produtos impressos que o parceiro pode baixar, editar e personalizar facilmente com os dados do cliente.</p>
+                                <ul class="space-y-2 text-gray-700 pl-4 border-l-2 border-primary">
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Economize tempo com modelos prontos para diversos produtos.</span></li>
+                                    <li class="flex items-start"><span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span><span>Personalize facilmente e apresente simulações realistas para seus clientes.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        
+        <!-- How It Works Section -->
+        <section id="processo" class="py-24 lg:py-32 bg-gray-50">
+            <div class="container mx-auto px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="max-w-3xl mx-auto text-center mb-20 scroll-animate">
+                    <div class="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full text-primary font-semibold text-sm mb-6">
+                        🚀 Processo Simplificado
+                    </div>
+                    <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+                        Como funciona na <span class="text-primary">prática</span>?
+                    </h2>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        Em apenas <strong>4 passos simples</strong>, você transforma sua ideia em produto finalizado, sem complicação e com total controle do processo.
+                    </p>
+                </div>                <!-- Steps -->
+                <div class="grid lg:grid-cols-4 gap-8 lg:gap-4">
+                    <!-- Step 1 -->
+                    <div class="text-center scroll-animate process-step" data-delay="100">
+                        <div class="relative mb-8">
+                            <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary/30 step-circle">
+                                <span class="text-2xl font-black text-white">1</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Envie seu Projeto</h3>
+                        <p class="text-gray-600">Faça upload do seu arquivo ou descreva sua necessidade. Nossa equipe analisa e te orienta sobre a melhor solução.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="text-center scroll-animate process-step" data-delay="200">
+                        <div class="relative mb-8">
+                            <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary/30 step-circle">
+                                <span class="text-2xl font-black text-white">2</span>
+                            </div>
+                        </div>                        <h3 class="text-xl font-bold text-gray-900 mb-3">Receba o Orçamento</h3>
+                        <p class="text-gray-600">Orçamento detalhado em poucas horas, com prazos, especificações técnicas e opções de pagamento.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="text-center scroll-animate process-step" data-delay="300">
+                        <div class="relative mb-8">
+                            <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary/30 step-circle">
+                                <span class="text-2xl font-black text-white">3</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Aprovação & Produção</h3>
+                        <p class="text-gray-600">Aprovando o orçamento, iniciamos a produção imediatamente. Você acompanha todo o processo em tempo real.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="text-center scroll-animate process-step" data-delay="400">
+                        <div class="relative mb-8">
+                            <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary/30 step-circle">
+                                <span class="text-2xl font-black text-white">4</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Entrega Garantida</h3>
+                        <p class="text-gray-600">Receba seu pedido no prazo combinado, com qualidade garantida e suporte completo pós-entrega.</p>
+                    </div>
+                </div>                <!-- Guarantee Badge -->
+                <div class="text-center mt-16 scroll-animate" data-delay="500">
+                    <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 rounded-full mb-8">
+                        <svg class="w-6 h-6 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                        <span class="font-semibold text-gray-900">Garantia de Qualidade Total</span>
+                    </div>
+                    
+                    <!-- CTA após processo -->
+                    <div class="scroll-animate" data-delay="600">
+                        <p class="text-lg text-gray-600 mb-6">Parece simples? <strong>É porque realmente é!</strong></p>
+                        <a href="https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21"
+                           onclick="return gtag_report_conversion('https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21');"
+                           target="_blank" class="whatsapp-btn group bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                            </svg>
+                            Quero Começar Agora!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Seção Segmentos/Nichos removida conforme solicitado -->
+    </main>    <!-- Footer -->
+    <footer id="contato" class="text-white" style="background-color: #231F20;">
+        <div class="container mx-auto px-6 lg:px-8 py-16">
+            <!-- Contact Form Section -->
+            <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                <!-- Contact Info -->
+                <div class="scroll-animate">
+                    <div class="flex items-center mb-8">
+                        <img src="assets/images/MARCA_ZAPGRAFICA_1COR_NEG-01.png" alt="Zap Gráfica" class="h-12 w-auto">
+                    </div>
+                    <h3 class="text-3xl font-bold mb-6">Vamos transformar suas ideias em realidade?</h3>
+                    <p class="text-gray-300 mb-8 text-lg">
+                        Entre em contato agora e descubra como nossos <strong>8 segmentos exclusivos</strong> podem revolucionar seus projetos gráficos.
+                    </p>
+                    
+                    <!-- Contact Methods -->
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Telefone/WhatsApp</div>
+                                <a href="https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21"
+                                   onclick="return gtag_report_conversion('https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21');"
+                                   target="_blank" class="text-primary hover:text-primary/80 text-lg">(31) 2566-6500</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24  24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-semibold">E-mail</div>
+                                <a href="mailto:atendimento@zapgrafica.com.br" class="text-primary hover:text-primary/80 text-lg">atendimento@zapgrafica.com.br</a>
+                            </div>
+                        </div>
+                          <div class="flex items-start">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <div class="font-semibold">Endereço</div>
+                                <div class="text-gray-300 text-sm sm:text-base break-words">
+                                    R. Curitiba, 1582-05<br class="hidden sm:inline">
+                                    <span class="sm:hidden"> - </span>Lourdes, Belo Horizonte - MG
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <!-- RD Station Form -->
+                <div class="rounded-2xl p-8 scroll-animate" style="background-color: #231F20;" data-delay="200">
+                    <div role="main" id="lp-vantagens-zap-b99ebee786b6cd7646e9"></div>
+                    <script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+                    <script type="text/javascript"> new RDStationForms('lp-vantagens-zap-b99ebee786b6cd7646e9', 'UA-26024689-3').createForm();</script>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="pt-8" style="border-top: 1px solid rgba(35, 31, 32, 0.6);">
+                <div class="grid md:grid-cols-4 gap-8 mb-8">
+                    <!-- Company Info -->
+                    <div>
+                        <h5 class="font-bold text-lg mb-4">Zap Gráfica</h5>
+                        <p class="text-gray-400 text-sm mb-4">Sua parceira estratégica em soluções gráficas. Transformamos ideias em resultados reais há mais de 20 anos.</p>                        <div class="flex space-x-4">
+                            <a href="https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21" target="_blank" class="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors group" style="background-color: #231F20;" title="WhatsApp">
+                                <svg class="w-6 h-6 text-[#00d355] group-hover:text-white transition-colors" width="24" height="24" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M25,2c-12.682,0 -23,10.318 -23,23c0,3.96 1.023,7.854 2.963,11.29l-2.926,10.44c-0.096,0.343 -0.003,0.711 0.245,0.966c0.191,0.197 0.451,0.304 0.718,0.304c0.08,0 0.161,-0.01 0.24,-0.029l10.896,-2.699c3.327,1.786 7.074,2.728 10.864,2.728c12.682,0 23,-10.318 23,-23c0,-12.682 -10.318,-23 -23,-23zM36.57,33.116c-0.492,1.362 -2.852,2.605 -3.986,2.772c-1.018,0.149 -2.306,0.213 -3.72,-0.231c-0.857,-0.27 -1.957,-0.628 -3.366,-1.229c-5.923,-2.526 -9.791,-8.415 -10.087,-8.804c-0.295,-0.389 -2.411,-3.161 -2.411,-6.03c0,-2.869 1.525,-4.28 2.067,-4.864c0.542,-0.584 1.181,-0.73 1.575,-0.73c0.394,0 0.787,0.005 1.132,0.021c0.363,0.018 0.85,-0.137 1.329,1.001c0.492,1.168 1.673,4.037 1.819,4.33c0.148,0.292 0.246,0.633 0.05,1.022c-0.196,0.389 -0.294,0.632 -0.59,0.973c-0.296,0.341 -0.62,0.76 -0.886,1.022c-0.296,0.291 -0.603,0.606 -0.259,1.19c0.344,0.584 1.529,2.493 3.285,4.039c2.255,1.986 4.158,2.602 4.748,2.894c0.59,0.292 0.935,0.243 1.279,-0.146c0.344,-0.39 1.476,-1.703 1.869,-2.286c0.393,-0.583 0.787,-0.487 1.329,-0.292c0.542,0.194 3.445,1.604 4.035,1.896c0.59,0.292 0.984,0.438 1.132,0.681c0.148,0.242 0.148,1.41 -0.344,2.771z"/>
+                                </svg>
+                            </a>
+                            <a href="https://instagram.com/zap_grafica" target="_blank" class="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all group" style="background-color: #231F20;" title="Instagram @zap_grafica">
+                                <svg class="w-6 h-6 text-[#00d355] group-hover:text-white transition-colors" width="24" height="24" viewBox="0 0 64 64" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.58008,7c-8.039,0 -14.58008,6.54494 -14.58008,14.58594v20.83203c0,8.04 6.54494,14.58203 14.58594,14.58203h20.83203c8.04,0 14.58203,-6.54494 14.58203,-14.58594v-20.83398c0,-8.039 -6.54494,-14.58008 -14.58594,-14.58008zM47,15c1.104,0 2,0.896 2,2c0,1.104 -0.896,2 -2,2c-1.104,0 -2,-0.896 -2,-2c0,-1.104 0.896,-2 2,-2zM32,19c7.17,0 13,5.83 13,13c0,7.17 -5.831,13 -13,13c-7.17,0 -13,-5.831 -13,-13c0,-7.169 5.83,-13 13,-13zM32,23c-4.971,0 -9,4.029 -9,9c0,4.971 4.029,9 9,9c4.971,0 9,-4.029 9,-9c0,-4.971 -4.029,-9 -9,-9z"/>
+                                </svg>
+                            </a>
+                            <a href="https://br.pinterest.com/zapgrafica/" target="_blank" class="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-red-600 transition-colors group" style="background-color: #231F20;" title="Pinterest">
+                                <svg class="w-6 h-6 text-[#00d355] group-hover:text-white transition-colors" width="24" height="24" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M25,2c-12.68213,0 -23,10.31787 -23,23c0,9.88416 6.26758,18.33026 15.03638,21.57697c-0.25256,-2.25159 -0.21295,-5.93903 0.2038,-7.72437c0.39026,-1.677 2.52124,-10.68713 2.52124,-10.68713c0,0 -0.64331,-1.28833 -0.64331,-3.1911c0,-2.99017 1.73242,-5.22119 3.88983,-5.22119c1.83496,0 2.71979,1.37762 2.71979,3.0282c0,1.8457 -1.17346,4.60266 -1.78125,7.15784c-0.5069,2.14093 1.07336,3.88654 3.18365,3.88654c3.82123,0 6.75848,-4.0296 6.75848,-9.84534c0,-5.14758 -3.698,-8.74719 -8.97955,-8.74719c-6.11676,0 -9.70728,4.58856 -9.70728,9.33099c0,1.84735 0.71118,3.82867 1.6001,4.90698c0.17529,0.21332 0.20093,0.39941 0.14886,0.61603c-0.1629,0.67889 -0.52509,2.13928 -0.59705,2.4386c-0.09344,0.39447 -0.31177,0.47632 -0.71863,0.28693c-2.68579,-1.25031 -4.3645,-5.17566 -4.3645,-8.32959c0,-6.78156 4.92682,-13.0108 14.20654,-13.0108c7.45886,0 13.25476,5.31384 13.25476,12.41791c0,7.41003 -4.67291,13.37299 -11.15686,13.37299c-2.17889,0 -4.22638,-1.13202 -4.92676,-2.46918c0,0 -1.07831,4.10486 -1.34045,5.11121c-0.45245,1.74042 -2.38928,5.34601 -3.36157,6.9837c2.22424,0.71851 4.59357,1.11102 7.05377,1.11102c12.68262,0 23,-10.31738 23,-23c0,-12.68213 -10.31738,-23 -23,-23z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/@zapgrafica" target="_blank" class="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-red-700 transition-colors group" style="background-color: #231F20;" title="YouTube">
+                                <svg class="w-6 h-6 text-[#00d355] group-hover:text-white transition-colors" width="24" height="24" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M44.89844,14.5c-0.39844,-2.19922 -2.29687,-3.80078 -4.5,-4.30078c-3.29687,-0.69922 -9.39844,-1.19922 -16,-1.19922c-6.59766,0 -12.79687,0.5 -16.09766,1.19922c-2.19922,0.5 -4.10156,2 -4.5,4.30078c-0.40234,2.5 -0.80078,6 -0.80078,10.5c0,4.5 0.39844,8 0.89844,10.5c0.40234,2.19922 2.30078,3.80078 4.5,4.30078c3.5,0.69922 9.5,1.19922 16.10156,1.19922c6.60156,0 12.60156,-0.5 16.10156,-1.19922c2.19922,-0.5 4.09766,-2 4.5,-4.30078c0.39844,-2.5 0.89844,-6.10156 1,-10.5c-0.20312,-4.5 -0.70312,-8 -1.20312,-10.5zM19,32v-14l12.19922,7z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.tiktok.com/@zap_grafica" target="_blank" class="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-black transition-colors group" style="background-color: #231F20;" title="TikTok">
+                                <svg class="w-6 h-6 text-[#00d355] group-hover:text-white transition-colors" width="24" height="24" viewBox="0 0 50 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M41,4h-32c-2.757,0 -5,2.243 -5,5v32c0,2.757 2.243,5 5,5h32c2.757,0 5,-2.243 5,-5v-32c0,-2.757 -2.243,-5 -5,-5zM37.006,22.323c-0.227,0.021 -0.457,0.035 -0.69,0.035c-2.623,0 -4.928,-1.349 -6.269,-3.388c0,5.349 0,11.435 0,11.537c0,4.709 -3.818,8.527 -8.527,8.527c-4.709,0 -8.527,-3.818 -8.527,-8.527c0,-4.709 3.818,-8.527 8.527,-8.527c0.178,0 0.352,0.016 0.527,0.027v4.202c-0.175,-0.021 -0.347,-0.053 -0.527,-0.053c-2.404,0 -4.352,1.948 -4.352,4.352c0,2.404 1.948,4.352 4.352,4.352c2.404,0 4.527,-1.894 4.527,-4.298c0,-0.095 0.042,-19.594 0.042,-19.594h4.016c0.378,3.591 3.277,6.425 6.901,6.685z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Services -->
+                    <div>
+                        <h5 class="font-bold text-lg mb-4">Zap Gráfica</h5>
+                        <p class="text-gray-400 text-sm mb-4">Sua parceira estratégica em soluções gráficas. Transformamos ideias em resultados reais há mais de 20 anos.</p>
+                        <div class="flex flex-col gap-2">
+                            <a href="#produtos" class="text-gray-400 hover:text-white transition-colors">Impressão Gráfica</a>
+                            <a href="#produtos" class="text-gray-400 hover:text-white transition-colors">Comunicação Visual</a>
+                            <a href="#produtos" class="text-gray-400 hover:text-white transition-colors">Embalagens</a>
+                            <a href="#produtos" class="text-gray-400 hover:text-white transition-colors">Brindes Promocionais</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Advantages -->
+                    <div>
+                        <h5 class="font-bold text-lg mb-4">Nossos Diferenciais</h5>
+                        <div class="flex flex-col gap-2">
+                            <a href="#vantagens" class="text-gray-400 hover:text-white transition-colors">Checagem Garantida</a>
+                            <a href="#vantagens" class="text-gray-400 hover:text-white transition-colors">Calculadora de Preços</a>
+                            <a href="#vantagens" class="text-gray-400 hover:text-white transition-colors">Arte Virtual</a>
+                            <a href="#vantagens" class="text-gray-400 hover:text-white transition-colors">ZapGo</a>
+                            <a href="#vantagens" class="text-gray-400 hover:text-white transition-colors">Sub Cliente</a>
+                            <a href="#vantagens" class="text-gray-400 hover:text-white transition-colors">Templates & Mockups</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Links -->
+                    <div>
+                        <h5 class="font-bold text-lg mb-4">Links Úteis</h5>
+                        <div class="flex flex-col gap-2">
+                            <a href="#processo" class="text-gray-400 hover:text-white transition-colors">Como Funciona</a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">Política de Privacidade</a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">Termos de Uso</a>
+                            <a href="#contato" class="text-gray-400 hover:text-white transition-colors">Contato</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Copyright -->
+                <div class="text-center text-gray-400 text-sm pt-8" style="border-top: 1px solid rgba(35, 31, 32, 0.6);">
+                    <p>&copy; 2025 Zap Gráfica. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-primary hover:bg-primary/90 text-white rounded-full flex items-center justify-center shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 opacity-0 pointer-events-none">        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+        </svg>    </a>
+    <!-- Bloco duplicado do RD Station removido -->
+    <script src="src/js/script.js"></script>
+    <!-- Facebook Pixel Event Tracking -->
+    <script>
+      // Debug: Verificar se Facebook Pixel está carregado
+      if (typeof fbq !== 'undefined') {
+        console.log('Facebook Pixel carregado com sucesso');
+      } else {
+        console.error('Facebook Pixel não foi carregado');
+      }
+
+      // Lead: RD Station form submit - múltiplas estratégias de captura
+      // Estratégia 1: Event listener oficial do RD Station
+      window.addEventListener('RDStationForms:formSubmitted', function(event) {
+        console.log('Evento Lead disparado via RDStationForms:formSubmitted');
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Lead');
+        }
+      });
+
+      // Estratégia 2: Observer para detectar mudanças no DOM do formulário
+      function observeFormSubmission() {
+        const formContainer = document.getElementById('lp-vantagens-zap-b99ebee786b6cd7646e9');
+        if (formContainer) {
+          const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+              if (mutation.type === 'childList') {
+                // Verificar se apareceu mensagem de sucesso
+                const successMessages = formContainer.querySelectorAll('[class*="success"], [class*="thank"], [class*="obrigado"]');
+                if (successMessages.length > 0) {
+                  console.log('Evento Lead disparado via observação de sucesso');
+                  if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Lead');
+                  }
+                }
+              }
+            });
+          });
+          observer.observe(formContainer, { childList: true, subtree: true });
+        }
+      }
+
+      // Estratégia 3: Interceptar submissões de formulário tradicionais
+      document.addEventListener('submit', function(event) {
+        const form = event.target;
+        if (form && (form.id === 'lp-vantagens-zap-b99ebee786b6cd7646e9' || form.closest('#lp-vantagens-zap-b99ebee786b6cd7646e9'))) {
+          console.log('Evento Lead disparado via submit tradicional');
+          if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead');
+          }
+        }
+      });
+
+      // Contact: WhatsApp click - estratégias múltiplas
+      function trackContactEvent(source) {
+        console.log('Evento Contact disparado via: ' + source);
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Contact');
+        }
+      }
+
+      // Função para adicionar listeners aos links do WhatsApp
+      function addWhatsAppListeners() {
+        // Seleciona todos os links do WhatsApp
+        const whatsappLinks = document.querySelectorAll('a[href*="api.whatsapp.com"], a[href*="whatsapp.com"], .whatsapp-btn');
+        
+        whatsappLinks.forEach(function(el, index) {
+          // Remove listeners anteriores para evitar duplicação
+          el.removeEventListener('click', trackContactEvent);
+          
+          // Adiciona novo listener
+          el.addEventListener('click', function(e) {
+            trackContactEvent('WhatsApp Link ' + (index + 1));
+          });
+          
+          console.log('Listener adicionado ao link WhatsApp:', el.href || el.textContent);
+        });
+      }
+
+      // Event delegation para capturar cliques em elementos dinâmicos
+      document.addEventListener('click', function(event) {
+        const target = event.target;
+        const link = target.closest('a[href*="api.whatsapp.com"], a[href*="whatsapp.com"], .whatsapp-btn');
+        
+        if (link) {
+          trackContactEvent('Event Delegation');
+        }
+      });
+
+      // Inicializar quando o DOM estiver pronto
+      document.addEventListener('DOMContentLoaded', function() {
+        addWhatsAppListeners();
+        observeFormSubmission();
+        
+        // Re-executar após um delay para capturar elementos carregados dinamicamente
+        setTimeout(function() {
+          addWhatsAppListeners();
+        }, 2000);
+      });
+
+      // Se o DOM já estiver carregado, executar imediatamente
+      if (document.readyState === 'loading') {
+        // DOM ainda está carregando
+      } else {
+        // DOM já carregado
+        addWhatsAppListeners();
+        observeFormSubmission();
+      }
+    </script>
+            <script>
+                (function() {
+                    // Disable on touch devices (no mouse)
+                    if ('ontouchstart' in window) return;
+
+                    const hero = document.querySelector('section.relative.min-h-screen');
+                    const bg = document.getElementById('hero-cursor-bg');
+                    if (!hero || !bg) return;
+
+                    let rafId = null;
+                    let lastX = '50%';
+                    let lastY = '50%';
+
+                    function updateBackground() {
+                        bg.style.background = `radial-gradient(400px 400px at ${lastX} ${lastY}, rgba(34,197,94,0.08), transparent 30%)`;
+                        rafId = null;
+                    }
+
+                    hero.addEventListener('mousemove', function(e) {
+                        const rect = hero.getBoundingClientRect();
+                        const x = ((e.clientX - rect.left) / rect.width) * 100;
+                        const y = ((e.clientY - rect.top) / rect.height) * 100;
+                        lastX = x.toFixed(1) + '%';
+                        lastY = y.toFixed(1) + '%';
+                        bg.classList.add('active');
+                        if (!rafId) rafId = requestAnimationFrame(updateBackground);
+                    });
+
+                    hero.addEventListener('mouseleave', function() {
+                        bg.classList.remove('active');
+                    });
+                })();
+            </script>
+
+                <!-- Lightweight UI interactions: tilt, magnetic CTA, parallax blobs -->
+                <script>
+                    (function() {
+                        // Respect preferences
+                        if ('ontouchstart' in window || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+                        // TILT: elements with data-tilt
+                        const tiltElems = document.querySelectorAll('[data-tilt]');
+                        tiltElems.forEach(el => {
+                            const max = parseFloat(el.getAttribute('data-tilt-max') || 12);
+                            el.classList.add('tilt');
+                            el.addEventListener('mousemove', (ev) => {
+                                const r = el.getBoundingClientRect();
+                                const px = (ev.clientX - r.left) / r.width - 0.5;
+                                const py = (ev.clientY - r.top) / r.height - 0.5;
+                                const rotX = (-py * max).toFixed(2);
+                                const rotY = (px * max).toFixed(2);
+                                el.style.transform = `perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+                                el.classList.add('card-tilt-shadow');
+                            });
+                            el.addEventListener('mouseleave', () => {
+                                el.style.transform = '';
+                                el.classList.remove('card-tilt-shadow');
+                            });
+                        });
+
+                        // MAGNETIC: elements with .magnetic
+                        const magnetic = document.querySelectorAll('.magnetic');
+                        magnetic.forEach(btn => {
+                            btn.addEventListener('mousemove', function(e) {
+                                const rect = btn.getBoundingClientRect();
+                                const dx = (e.clientX - (rect.left + rect.width / 2)) / (rect.width / 2);
+                                const dy = (e.clientY - (rect.top + rect.height / 2)) / (rect.height / 2);
+                                const strength = 6; // px
+                                btn.style.transform = `translate(${dx * strength}px, ${dy * strength}px)`;
+                            });
+                            btn.addEventListener('mouseleave', function() { btn.style.transform = ''; });
+                        });
+
+                        // PARALLAX BLOBS: elements with .parallax-blob will move slightly on scroll
+                        const blobs = document.querySelectorAll('.parallax-blob');
+                        function updateBlobs() {
+                            const scrolled = window.scrollY || window.pageYOffset;
+                            blobs.forEach((b, i) => {
+                                const depth = parseFloat(b.getAttribute('data-depth') || (0.06 + i * 0.02));
+                                b.style.transform = `translateY(${scrolled * depth * -1}px)`;
+                            });
+                        }
+                        window.addEventListener('scroll', () => { requestAnimationFrame(updateBlobs); });
+                        // initial
+                        updateBlobs();
+                    })();
+                </script>
+
+                <!-- IntersectionObserver: smooth, slightly faster scroll animations -->
+        <script>
+            (function() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        const el = entry.target;
+                        if (entry.isIntersecting) {
+                            const delay = parseInt(el.getAttribute('data-delay') || '0', 10);
+                            // small stagger based on data-delay (ms) but capped
+                            setTimeout(() => el.classList.add('in-view'), Math.min(delay, 200));
+                        }
+                    });
+                }, { threshold: 0.12 });
+
+                document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+            })();
+        </script>
+    <!-- End Facebook Pixel Event Tracking -->
+    <!-- Hero cursor-follow background: styles + script -->
+    <style>
+        /* Subtle radial spotlight that follows the cursor inside the hero */
+        #hero-cursor-bg {
+            background: radial-gradient(400px 400px at 50% 50%, rgba(34,197,94,0.08), transparent 30%);
+            transition: opacity 400ms ease, background-position 120ms linear;
+            opacity: 0;
+            will-change: background-position, opacity;
+        }
+
+        /* When active we make it visible */
+        #hero-cursor-bg.active {
+            opacity: 1;
+        }
+
+        /* Slightly different color on hover for visual depth */
+        #hero-cursor-bg .overlay {
+            position: absolute; inset: 0; pointer-events: none;
+        }
+    </style>
+    <!-- Modern UI effects: tilt, magnetic CTA, parallax blobs -->
+    <style>
+        /* Respect user's reduce motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            .tilt, .magnetic, .parallax-blob { transition: none !important; transform: none !important; animation: none !important; }
+        }
+
+        /* Tilt effect container */
+        .tilt { transform-style: preserve-3d; will-change: transform; transition: transform 280ms cubic-bezier(.2,.9,.2,1); }
+
+        /* Magnetic CTA: moves slightly toward cursor when nearby */
+        .magnetic { transition: transform 220ms cubic-bezier(.2,.9,.2,1); will-change: transform; }
+
+        /* Subtle parallax blobs that respond to scroll and pointer */
+        .parallax-blob { will-change: transform, opacity; transition: transform 400ms ease-out, opacity 400ms ease-out; }
+
+        /* Product card subtle lift for tilt fallback */
+        .card-tilt-shadow { transition: box-shadow 280ms ease, transform 280ms ease; }
+    </style>
+
+    <!-- Event snippet for WhatsApp Click conversion -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-1001326878/ydbnCPygueQaEJ6SvN0D',
+          'value': 50.0,
+          'currency': 'BRL',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+
+    <!-- Google Ads Conversion for Form Submit (RD Station) -->
+    <script>
+    function gtag_report_conversion_form() {
+      gtag('event', 'conversion', {
+          'send_to': 'AW-1001326878/jByTCP-gueQaEJ6SvN0D',
+          'value': 100.0,
+          'currency': 'BRL'
+      });
+    }
+    window.addEventListener('RDStationForms:formSubmitted', function(event) {
+      gtag_report_conversion_form();
+    });
+    </script>
+    <script>
+      window.addEventListener('RDStationForms:formSubmitted', function(event) {
+        gtag('event', 'lead_submit', {
+          event_category: 'Formulário',
+          event_label: 'Orçamento LP'
+        });
+      });
+    </script>
+    <script>
+    document.querySelectorAll('a[href*="api.whatsapp.com"]').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        // Dispara o evento do Pixel aqui
+        fbq('trackCustom', 'WhatsAppClick');
+        // Adiciona delay antes de redirecionar
+        e.preventDefault();
+        setTimeout(function() {
+          window.location.href = btn.href;
+        }, 150000); // 15 segundos
+      });
+    });
+    </script>
+    <!-- Video modal: lazy factory (creates modal DOM and iframe on first use) -->
+    <style>
+    /* Modal visuals: polished enter + exit */
+    .video-modal-enter { animation: modalIn .32s cubic-bezier(.2,.9,.2,1) both; }
+    .video-modal-leave { animation: modalOut .22s cubic-bezier(.4,0,.2,1) both; }
+    @keyframes modalIn { from { opacity: 0; transform: translateY(6px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    @keyframes modalOut { from { opacity: 1; transform: translateY(0) scale(1); } to { opacity: 0; transform: translateY(6px) scale(.985); } }
+    .video-modal-card { box-shadow: 0 40px 110px rgba(2,6,23,0.6); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; overflow: hidden; }
+    @media (prefers-reduced-motion: reduce) { .video-modal-enter, .video-modal-leave { animation: none; } }
+    </style>
+
+    <script>
+    (function(){
+        let modalEl = null;
+        let iframeEl = null;
+        let boxEl = null;
+        let isClosing = false;
+
+        function createModal(){
+            modalEl = document.createElement('div');
+            modalEl.className = 'fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4';
+            modalEl.setAttribute('role','dialog');
+            modalEl.setAttribute('aria-modal','true');
+
+            const wrapper = document.createElement('div');
+            wrapper.className = 'max-w-4xl w-full mx-auto';
+
+            boxEl = document.createElement('div');
+            boxEl.className = 'relative pb-[56.25%] bg-black video-modal-card video-modal-enter';
+
+            // iframe placeholder (created once)
+            iframeEl = document.createElement('iframe');
+            iframeEl.className = 'absolute inset-0 w-full h-full';
+            iframeEl.setAttribute('frameborder','0');
+            iframeEl.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+            iframeEl.setAttribute('allowfullscreen','');
+
+            const closeBtn = document.createElement('button');
+            closeBtn.className = 'absolute top-3 right-3 bg-white/90 text-black rounded-full w-10 h-10 flex items-center justify-center shadow-lg';
+            closeBtn.innerText = '✕';
+            closeBtn.addEventListener('click', closeModal);
+
+            boxEl.appendChild(iframeEl);
+            boxEl.appendChild(closeBtn);
+            wrapper.appendChild(boxEl);
+            modalEl.appendChild(wrapper);
+
+            modalEl.addEventListener('click', function(e){ if(e.target === modalEl) closeModal(); });
+            document.addEventListener('keydown', onKeyDown);
+
+            document.body.appendChild(modalEl);
+        }
+
+        function onKeyDown(e){ if(e.key === 'Escape') closeModal(); }
+
+        function openModalWithId(videoId){
+            if(isClosing) return; // don't reopen while closing
+            if(!modalEl) createModal();
+            // attempt preconnect
+            try { const p = document.createElement('link'); p.rel = 'preconnect'; p.href = 'https://www.youtube.com'; p.crossOrigin = ''; document.head.appendChild(p); } catch(e){}
+            iframeEl.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+            // ensure enter animation
+            boxEl.classList.remove('video-modal-leave');
+            boxEl.classList.add('video-modal-enter');
+            modalEl.style.display = 'flex';
+            modalEl.classList.remove('hidden');
+            document.documentElement.style.overflow = 'hidden';
+        }
+
+        function closeModal(){
+            if(!modalEl || isClosing) return;
+            isClosing = true;
+            // trigger leave animation
+            boxEl.classList.remove('video-modal-enter');
+            boxEl.classList.add('video-modal-leave');
+            const cleanup = function(){
+                try { iframeEl.src = ''; } catch(e){}
+                modalEl.style.display = 'none';
+                modalEl.classList.add('hidden');
+                document.documentElement.style.overflow = '';
+                isClosing = false;
+                // remove leave class to allow re-entry animation next time
+                boxEl.classList.remove('video-modal-leave');
+            };
+            // wait for animation to finish, fallback to timeout
+            const onAnim = function(){ modalEl.removeEventListener('animationend', onAnim); cleanup(); };
+            modalEl.addEventListener('animationend', onAnim);
+            // safety timeout if animationend doesn't fire
+            setTimeout(() => { if(isClosing) { modalEl.removeEventListener('animationend', onAnim); cleanup(); } }, 400);
+        }
+
+        window.openVideoModal = openModalWithId;
+        window.closeVideoModal = closeModal;
+    })();
+    </script>
+
+    <script>
+    // Thumbnail fallback: if maxresdefault fails, try hqdefault
+    (function(){
+        function attachFallback(img){
+            if(!img) return;
+            const src = img.src || '';
+            const m = src.match(/img\.youtube\.com\/vi\/([^\/]+)\/maxresdefault\.jpg/);
+            if(!m) return;
+            const id = m[1];
+            let attempted = false;
+            img.addEventListener('error', function(){
+                if(attempted) return; attempted = true;
+                img.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+            });
+        }
+
+        // Attach to all thumbnail images that use maxresdefault
+        document.querySelectorAll('img[src*="img.youtube.com/vi/"]').forEach(function(i){ attachFallback(i); });
+
+        // Also enhance hover prefetch for video triggers
+        const videoTriggers = document.querySelectorAll('[onclick*="openVideoModal("]');
+        videoTriggers.forEach(el => {
+            let prefetched = false;
+            el.addEventListener('mouseenter', function(){
+                if(prefetched) return; prefetched = true;
+                const onclick = el.getAttribute('onclick') || '';
+                const m = onclick.match(/openVideoModal\(['\"]\s*([^'\"]+)\s*['\"]\)/);
+                const id = m && m[1];
+                if(!id) return;
+                // preconnect
+                try { const p = document.createElement('link'); p.rel='preconnect'; p.href='https://www.youtube.com'; p.crossOrigin=''; document.head.appendChild(p); } catch(e){}
+                // preload best thumbnail, fallback to hqdefault on error
+                const img = new Image();
+                img.onload = function(){ /* cached */ };
+                img.onerror = function(){ img.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`; };
+                img.src = `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
+            });
+        });
+    })();
+    </script>
+</body>
+</html>
