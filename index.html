@@ -1468,6 +1468,15 @@
         #segment-tooltip:not(.hidden) {
             display: block !important;
         }
+        
+        /* Segment chips animation */
+        .segment-chip {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        #segment-chips {
+            transition: height 0.4s ease-out;
+        }
     </style>
 
     <script>
@@ -1626,19 +1635,77 @@
         const ttTitle = document.getElementById('segment-tooltip-title');
         const ttDesc = document.getElementById('segment-tooltip-desc');
         const toggleBtn = document.getElementById('toggle-segments');
-        let expanded = false; const initialCount = 8;
-        function render(){
-            chipsContainer.innerHTML='';
-            (expanded?segments:segments.slice(0,initialCount)).forEach(seg=>{
-                const b=document.createElement('button');
-                b.type='button';
-                b.className='segment-chip px-4 py-2 rounded-full text-sm bg-white/5 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition';
-                b.textContent=seg.name; b.dataset.name=seg.name; b.dataset.desc=seg.desc; chipsContainer.appendChild(b);
-            });
-            if(toggleBtn) toggleBtn.textContent = expanded? 'Mostrar menos' : 'Ver todos os nichos';
+        let expanded = false; 
+        const initialCount = 8;
+        
+        function createChip(seg, delay = 0) {
+            const b = document.createElement('button');
+            b.type = 'button';
+            b.className = 'segment-chip px-4 py-2 rounded-full text-sm bg-white/5 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300';
+            b.textContent = seg.name;
+            b.dataset.name = seg.name;
+            b.dataset.desc = seg.desc;
+            
+            // Initial state for animation
+            b.style.opacity = '0';
+            b.style.transform = 'translateY(10px) scale(0.9)';
+            
+            // Animate in
+            setTimeout(() => {
+                b.style.opacity = '1';
+                b.style.transform = 'translateY(0) scale(1)';
+            }, delay);
+            
+            return b;
         }
-        render();
-        if(toggleBtn) toggleBtn.addEventListener('click', ()=>{ expanded=!expanded; render(); });
+        
+        function render() {
+            if (expanded) {
+                // Show additional chips with staggered animation
+                const additionalChips = segments.slice(initialCount);
+                additionalChips.forEach((seg, index) => {
+                    const chip = createChip(seg, index * 50);
+                    chipsContainer.appendChild(chip);
+                });
+            } else {
+                // Hide additional chips with fade out
+                const allChips = chipsContainer.querySelectorAll('.segment-chip');
+                const chipsToRemove = Array.from(allChips).slice(initialCount);
+                
+                chipsToRemove.forEach((chip, index) => {
+                    setTimeout(() => {
+                        chip.style.opacity = '0';
+                        chip.style.transform = 'translateY(-10px) scale(0.9)';
+                        setTimeout(() => {
+                            if (chip.parentNode) {
+                                chip.remove();
+                            }
+                        }, 300);
+                    }, index * 30);
+                });
+            }
+            
+            if (toggleBtn) {
+                toggleBtn.textContent = expanded ? 'Mostrar menos' : 'Ver todos os nichos';
+            }
+        }
+        
+        function initialRender() {
+            chipsContainer.innerHTML = '';
+            segments.slice(0, initialCount).forEach((seg, index) => {
+                const chip = createChip(seg, index * 50);
+                chipsContainer.appendChild(chip);
+            });
+            if (toggleBtn) {
+                toggleBtn.textContent = 'Ver todos os nichos';
+            }
+        }
+        
+        initialRender();
+        if(toggleBtn) toggleBtn.addEventListener('click', ()=>{ 
+            expanded = !expanded; 
+            render(); 
+        });
         if(!tooltip) return;
         
         let hideTimeout;
