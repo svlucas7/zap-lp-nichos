@@ -1273,14 +1273,13 @@
         }
         .bg-orb { position:absolute; width:360px; height:360px; border-radius:50%;
             background: radial-gradient(circle at 35% 35%, rgba(34,197,94,0.38), rgba(34,197,94,0.05) 68%, rgba(34,197,94,0) 75%);
-            filter: blur(28px) saturate(115%); opacity:.42; animation: floatSlow 20s ease-in-out infinite;
-            mix-blend-mode: screen; }
-        .orb-a { top:-90px; left:-80px; animation-delay:-6s; }
-        .orb-b { bottom:-120px; right:-60px; animation-duration:24s; animation-delay:-3s; }
-        .orb-c { top:40%; left:55%; width:260px; height:260px; opacity:.30; animation-duration:26s; animation-delay:-9s;
+            filter: blur(28px) saturate(115%); opacity:.42;
+            mix-blend-mode: screen; will-change: transform; }
+        .orb-a { top:-90px; left:-80px; }
+        .orb-b { bottom:-120px; right:-60px; }
+        .orb-c { top:40%; left:55%; width:260px; height:260px; opacity:.30;
             background: radial-gradient(circle at 30% 30%, rgba(16,185,129,0.32), rgba(16,185,129,0) 70%); }
-        @keyframes floatSlow { 0%,100% { transform: translate3d(0,0,0) scale(1); } 50% { transform: translate3d(55px,25px,0) scale(1.06); } }
-        @media (prefers-reduced-motion: reduce){ #hero-bg-minimal, .bg-orb { animation:none !important; transform:none !important;} }
+        @media (prefers-reduced-motion: reduce){ .bg-orb { transform:none !important;} }
     </style>
     <!-- Modern UI effects: tilt, magnetic CTA, parallax blobs -->
     <style>
@@ -1305,39 +1304,44 @@
         (function(){
             if('ontouchstart' in window) return; // simplifica mobile
             const hero = document.querySelector('section.relative.min-h-screen');
-            const bg = document.getElementById('hero-bg-minimal');
             const orbs = document.querySelectorAll('.bg-orb');
-            if(!hero || !bg || !orbs.length) return;
+            if(!hero || !orbs.length) return;
+            
+            console.log('Orbs encontrados:', orbs.length); // debug
             
             let mouseX = 0.5, mouseY = 0.5; // normalized position
             const orbStates = Array.from(orbs).map((orb, i) => ({
                 element: orb,
                 currentX: 0, currentY: 0,
                 targetX: 0, targetY: 0,
-                speed: 0.04 + (i * 0.015), // diferentes velocidades
-                influence: 0.8 - (i * 0.2), // diferentes níveis de influência
-                offset: { x: (i - 1) * 0.1, y: (i - 1) * 0.05 } // offsets únicos
+                speed: 0.06 + (i * 0.02), // velocidades mais rápidas
+                influence: 1.2 - (i * 0.3), // mais influência
+                offset: { x: (i - 1) * 0.15, y: (i - 1) * 0.1 } // offsets maiores
             }));
             
             const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if(reduce) return; // exit early if reduced motion
+            if(reduce) {
+                console.log('Reduced motion ativo - saindo');
+                return;
+            }
             
             function animate(){
-                orbStates.forEach(state => {
+                orbStates.forEach((state, i) => {
                     // Calculate target based on mouse position + unique offset
                     const offsetMouseX = mouseX + state.offset.x;
                     const offsetMouseY = mouseY + state.offset.y;
                     
-                    // Convert to pixel displacement
-                    state.targetX = (offsetMouseX - 0.5) * 85 * state.influence;
-                    state.targetY = (offsetMouseY - 0.5) * 65 * state.influence;
+                    // Convert to pixel displacement (maiores)
+                    state.targetX = (offsetMouseX - 0.5) * 120 * state.influence;
+                    state.targetY = (offsetMouseY - 0.5) * 90 * state.influence;
                     
                     // Smooth interpolation
                     state.currentX += (state.targetX - state.currentX) * state.speed;
                     state.currentY += (state.targetY - state.currentY) * state.speed;
                     
                     // Apply transform
-                    state.element.style.transform = `translate3d(${state.currentX}px, ${state.currentY}px, 0)`;
+                    const transform = `translate3d(${state.currentX}px, ${state.currentY}px, 0)`;
+                    state.element.style.transform = transform;
                 });
                 requestAnimationFrame(animate);
             }
@@ -1347,6 +1351,7 @@
                 const r = hero.getBoundingClientRect();
                 mouseX = (e.clientX - r.left) / r.width;
                 mouseY = (e.clientY - r.top) / r.height;
+                console.log('Mouse pos:', mouseX.toFixed(2), mouseY.toFixed(2)); // debug
             });
             
             hero.addEventListener('mouseleave', () => {
