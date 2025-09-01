@@ -1,0 +1,551 @@
+/* Fonts */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Custom Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scroll Animations */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.scroll-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Header Effects */
+.header-scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Back to Top Button */
+#back-to-top {
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(0, 211, 85, 0.4);
+}
+
+/* Form Improvements */
+.form-group {
+    position: relative;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    transform: translateY(-20px) scale(0.8);
+    color: #00d355;
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, #00d355 0%, #00a344 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Hover Effects */
+.hover-lift {
+    transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+.btn-primary {
+    background: linear-gradient(135deg, #00d355 0%, #00a344 100%);
+    box-shadow: 0 4px 15px rgba(0, 211, 85, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 211, 85, 0.4);
+    background: linear-gradient(135deg, #00e662 0%, #00b84a 100%);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #00d355 0%, #00a344 100%);
+    box-shadow: 0 4px 15px rgba(0, 174, 239, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 174, 239, 0.4);
+    background: linear-gradient(135deg, #00e662 0%, #00b84a 100%);
+}
+
+/* WhatsApp Button Styles */
+.whatsapp-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.whatsapp-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.whatsapp-btn:hover::before {
+    left: 100%;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+}
+
+.whatsapp-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-btn:hover svg {
+    transform: scale(1.1);
+}
+
+/* WhatsApp Button Specific Colors */
+.bg-green-600 {
+    background-color: #16a34a !important;
+}
+
+.hover\:bg-green-700:hover {
+    background-color: #15803d !important;
+}
+
+.text-green-600 {
+    color: #16a34a !important;
+}
+
+.shadow-green-600\/30 {
+    box-shadow: 0 20px 25px -5px rgba(34, 197, 94, 0.3), 0 10px 10px -5px rgba(34, 197, 94, 0.1);
+}
+
+.hover\:shadow-green-600\/50:hover {
+    box-shadow: 0 25px 50px -12px rgba(34, 197, 94, 0.5);
+}
+
+/* Card Styles */
+.card-hover {
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Tab Styles for Services Section */
+.tab-buttons {
+    display: flex;
+    border-bottom: 2px solid #e2e8f0;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.tab-buttons::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-button {
+    padding: 1rem 1.5rem;
+    background: transparent;
+    border: none;
+    color: #64748b;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap;
+    min-width: fit-content;
+}
+
+.tab-button:hover {
+    color: #00d355;
+    background: rgba(0, 211, 85, 0.05);
+}
+
+.tab-button.active {
+    color: #00d355;
+    border-bottom-color: #00d355;
+    background: rgba(0, 211, 85, 0.1);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile tab styles */
+@media (max-width: 768px) {
+    .tab-buttons {
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+    }
+    
+    .tab-button {
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .scroll-animate {
+        transform: translateY(30px);
+    }
+    
+    .text-5xl {
+        font-size: 2.5rem;
+    }
+    
+    .text-6xl {
+        font-size: 3rem;
+    }
+}
+
+/* Responsive WhatsApp Buttons */
+@media (max-width: 640px) {
+    .whatsapp-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .whatsapp-btn svg {
+        margin-right: 8px;
+    }
+}
+
+
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus States */
+*:focus {
+    outline: 2px solid #00d355;
+    outline-offset: 2px;
+}
+
+/* Smooth Scrolling for All */
+html {
+    scroll-behavior: smooth;
+}
+
+/* How It Works Section - Process Steps with connecting lines */
+.process-step {
+    position: relative;
+}
+
+.process-step::after {
+    content: '';
+    position: absolute;
+    top: 40px; /* Center of the circle (80px height / 2) */
+    left: calc(50% + 40px); /* Start from the right edge of the circle */
+    width: calc(100% - 40px); /* Full width minus circle radius */
+    height: 2px;
+    background: linear-gradient(to right, #00d355, transparent);
+    z-index: 1;
+}
+
+.process-step:last-child::after {
+    display: none; /* Hide line on last step */
+}
+
+.process-step .step-circle {
+    position: relative;
+    z-index: 2; /* Ensure circle appears above the line */
+}
+
+/* Only show connecting lines on desktop */
+@media (max-width: 1024px) {
+    .process-step::after {
+        display: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* iOS-style Notifications - Simplified and Mobile-First */
+.notification-ios {
+    position: fixed !important;
+    top: 1rem !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(-100%) !important;
+    z-index: 9999 !important;
+    width: calc(100vw - 2rem) !important;
+    max-width: 24rem !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    transition: all 0.5s ease-out !important;
+    opacity: 0 !important;
+}
+
+.notification-ios.show {
+    transform: translateX(-50%) translateY(0) !important;
+    opacity: 1 !important;
+}
+
+.notification-ios:hover {
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Dark mode support for notifications */
+@media (prefers-color-scheme: dark) {
+    .notification-ios {
+        background: rgba(44, 44, 46, 0.95) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+}
+
+/* iOS-style button hover effects */
+.notification-ios button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+}
+
+.notification-ios button:active {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(0.95);
+}
+
+/* Notification stacking - ensure proper z-index */
+.notification-ios:nth-child(1) {
+    z-index: 9999 !important;
+}
+
+.notification-ios:nth-child(2) {
+    z-index: 9998 !important;
+}
+
+.notification-ios:nth-child(3) {
+    z-index: 9997 !important;
+}
+
+/* Accordion Styles */
+.accordion-item {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: rgba(0, 211, 85, 0.05);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), padding 0.5s ease;
+    padding: 0 1rem;
+}
+
+.accordion-content.show {
+    padding: 1rem 1rem 1.5rem;
+}
+
+.accordion-icon {
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.accordion-header.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+/* Custom Tailwind Gradient Overrides - Verde com Degradê Sutil */
+.bg-gradient-to-r.from-primary.to-secondary {
+    background: linear-gradient(to right, #00d355 0%, #00a344 100%) !important;
+}
+
+.bg-gradient-to-r.from-secondary.to-primary {
+    background: linear-gradient(to right, #00a344 0%, #00d355 100%) !important;
+}
+
+.bg-clip-text.bg-gradient-to-r.from-primary.to-secondary {
+    background: linear-gradient(to right, #00d355 0%, #00a344 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+/* Seção "Por que a Zap é diferente" - Ícones com degradê */
+#diferenciais-accordion .accordion-header .bg-primary {
+    background: linear-gradient(135deg, #00d355 0%, #00a344 100%) !important;
+    transition: all 0.3s ease;
+}
+
+#diferenciais-accordion .accordion-header:hover .bg-primary {
+    background: linear-gradient(135deg, #00e662 0%, #00b84a 100%) !important;
+    transform: scale(1.05);
+}
+
+/* Palavra "precisa" na seção de produtos - Degradê verde elegante */
+.text-primary {
+    background: linear-gradient(135deg, #00d355 0%, #00a344 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+/* Botão "Solicitar Orçamento Personalizado" - Fundo branco garantido */
+.bg-white.text-primary {
+    background: white !important;
+    color: #00d355 !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    background-clip: initial !important;
+}
+
+.bg-white.text-primary:hover {
+    background: #f8f9fa !important;
+    color: #00a344 !important;
+}
+
+/* Badge "10.000 clientes satisfeitos" - Mantém fundo e texto normal */
+.bg-primary\/10.text-primary {
+    background: rgba(0, 211, 85, 0.1) !important;
+    color: #00d355 !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    background-clip: initial !important;
+}
+
+/* Custom Dark Background Elements */
+.dark-bg-custom {
+    background-color: #231F20;
+}
+
+.dark-bg-custom-light {
+    background-color: rgba(35, 31, 32, 0.25);
+}
+
+.dark-bg-custom-medium {
+    background-color: rgba(35, 31, 32, 0.6);
+}
+
+.dark-bg-custom-strong {
+    background-color: rgba(35, 31, 32, 0.8);
+}
+
+.dark-border-custom {
+    border-color: rgba(35, 31, 32, 0.6);
+}
