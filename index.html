@@ -86,6 +86,20 @@
                                     margin-top: auto;
                                     align-self: flex-start; /* keep link left-aligned */
                                 }
+                /* Reusable outline primary button with icon color guarantees */
+                .btn-outline-primary {
+                    position: relative;
+                    --btn-color: #00d355;
+                    color: var(--btn-color);
+                    border:2px solid var(--btn-color);
+                    background: transparent;
+                }
+                .btn-outline-primary:focus { outline: 2px solid var(--btn-color); outline-offset: 2px; }
+                .btn-outline-primary svg { color: var(--btn-color); fill: currentColor; transition: color .3s, transform .3s; }
+                .btn-outline-primary .btn-text { color: var(--btn-color); }
+                .btn-outline-primary:hover { background: var(--btn-color); color:#fff; }
+                .btn-outline-primary:hover .btn-text, .btn-outline-primary:hover svg { color:#fff; }
+                .btn-outline-primary[data-force-visible] * { visibility: visible !important; opacity:1 !important; }
                 </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPSZZTBT3X"></script>
@@ -462,7 +476,7 @@
                             <a href="https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21"
                                onclick="return gtag_report_conversion('https://wa.me/+553125666500?text=Zap%20sob%20medida%20para%20voc%C3%AA%21');"
                                target="_blank" class="whatsapp-btn magnetic group border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center justify-center">
-                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-5 h-5 mr-2 text-white group-hover:text-green-600 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
                             </svg>
                                 WhatsApp Comercial
@@ -513,8 +527,25 @@
                 <div class="max-w-3xl mx-auto text-center mt-12 scroll-animate" data-delay="300">
                     <p class="text-gray-700 mb-6">Quer ver todos os conteúdos? Acesse nossa playlist completa ou solicite o kit com materiais exclusivos.</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="https://www.youtube.com/playlist?list=PLnrtPPaEQLUFqoDGQDzo27WRp3hP_M7F7" target="_blank" class="bg-primary text-white px-6 py-3 rounded-full font-semibold magnetic">Acessar playlist Zap Class</a>
-                        <a href="https://www.zapgrafica.com.br/home/categoria/amostra-parceiro-zap/parceiro-zap" target="_blank" class="border-2 border-primary text-primary px-6 py-3 rounded-full font-semibold">Ver kit de amostras</a>
+                        <a href="https://www.youtube.com/playlist?list=PLnrtPPaEQLUFqoDGQDzo27WRp3hP_M7F7" target="_blank" class="magnetic group bg-gradient-to-r from-primary to-primary/80 text-white px-8 py-4 rounded-full font-bold hover:shadow-2xl hover:shadow-primary/30 hover:scale-105 transition-all duration-300 inline-flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/15 to-white/0 translate-x-[-120%] group-hover:translate-x-[120%] transition-transform duration-700 pointer-events-none z-0"></div>
+                            <svg class="w-5 h-5 mr-2 text-white group-hover:text-white group-hover:scale-110 transition-transform duration-300 relative z-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            <span class="relative z-10 tracking-tight leading-none select-none">Acessar playlist Zap Class</span>
+                            <svg class="w-4 h-4 ml-2 text-white group-hover:text-white group-hover:translate-x-1 transition-transform duration-300 relative z-10" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.zapgrafica.com.br/home/categoria/amostra-parceiro-zap/parceiro-zap" target="_blank" class="btn-outline-primary magnetic group px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:scale-105 transition-all duration-300" data-force-visible>
+                            <svg class="w-5 h-5 flex-shrink-0 transition-all duration-300" style="color:#00d355" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                            </svg>
+                            <span class="btn-text flex-1 text-center leading-tight select-none">Ver kit de amostras</span>
+                            <svg class="w-4 h-4 flex-shrink-0 transition-transform duration-300 group-hover:translate-x-1" style="color:#00d355" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -584,50 +615,7 @@
             </div>
         </section>
 
-        <!-- Reinserted: subheadline + badges + CTAs + social proof (moved from Hero) -->
-        <section class="py-12 lg:py-16 bg-white">
-            <div class="container mx-auto px-6 lg:px-8">
-                <div class="max-w-4xl mx-auto text-center mb-6 scroll-animate" data-delay="100">
-                    <h3 class="text-lg font-semibold text-gray-600 mb-2">Procurando algo diferente?</h3>
-                    <h2 class="text-2xl lg:text-3xl font-black text-gray-900 mb-3">Conheça os <span class="text-primary">8 nichos</span> da Zap.</h2>
-                    <p class="text-gray-600">Encontre soluções prontas por nicho para acelerar suas vendas e surpreender seus clientes.</p>
-                </div>
-
-                <div class="flex flex-wrap justify-center gap-3 mb-6 scroll-animate" data-delay="200">
-                    <span class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold">Comunicação</span>
-                    <span class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold">Promocional</span>
-                    <span class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold">Brindes</span>
-                    <span class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold">Tecidos</span>
-                    <span class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold">Embalagens</span>
-                    <span class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold">Atacado</span>
-                    <span class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold">Rótulos</span>
-                    <span class="inline-flex items-center px-4 py-2 bg-secondary/10 rounded-full text-secondary font-semibold">Digital</span>
-                </div>
-
-                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6 scroll-animate" data-delay="300">
-                    <a href="#vantagens" class="bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-primary/90 transition-all duration-200">Descobrir os 8 Diferenciais</a>
-                    <a href="https://wa.me/+553125666500?text=Quero%20conhecer%20os%208%20nichos%20da%20Zap" onclick="return gtag_report_conversion('https://wa.me/+553125666500?text=Quero%20conhecer%20os%208%20nichos%20da%20Zap');" target="_blank" class="whatsapp-btn magnetic group border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-bold transition-all duration-200 inline-flex items-center justify-center">
-                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
-                        Falar no WhatsApp
-                    </a>
-                </div>
-
-                <div class="flex flex-col sm:flex-row justify-center gap-8 text-center scroll-animate" data-delay="400">
-                    <div>
-                        <div class="text-2xl font-black text-gray-900">10k+</div>
-                        <div class="text-gray-400 text-sm">Clientes Ativos</div>
-                    </div>
-                    <div>
-                        <div class="text-2xl font-black text-gray-900">20+</div>
-                        <div class="text-gray-400 text-sm">Anos no Mercado</div>
-                    </div>
-                    <div>
-                        <div class="text-2xl font-black text-gray-900">8.7/10</div>
-                        <div class="text-gray-400 text-sm">Reputação Reclame Aqui</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Seção de segmentos removida conforme solicitação -->
 
         <!-- Vantagens Section -->
         <section id="vantagens" class="py-24 lg:py-32 bg-white">
@@ -1026,7 +1014,7 @@
                     <!-- Services -->
                     <div>
                         <h5 class="font-bold text-lg mb-4">Zap Gráfica</h5>
-                        <p class="text-gray-400 text-sm mb-4">Sua parceira estratégica em soluções gráficas. Transformamos ideias em resultados reais há mais de 20 anos.</p>
+                        <!-- <p class="text-gray-400 text-sm mb-4">Sua parceira estratégica em soluções gráficas. Transformamos ideias em resultados reais há mais de 20 anos.</p> -->
                         <div class="flex flex-col gap-2">
                             <a href="#produtos" class="text-gray-400 hover:text-white transition-colors">Impressão Gráfica</a>
                             <a href="#produtos" class="text-gray-400 hover:text-white transition-colors">Comunicação Visual</a>
