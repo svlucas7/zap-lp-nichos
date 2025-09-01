@@ -237,15 +237,9 @@
                 </div>
             </div>
             <!-- Tooltip container for segments -->
-            <div id="segment-tooltip" class="hidden fixed z-40 pointer-events-none max-w-xs p-4 rounded-xl bg-neutral-900/95 backdrop-blur border border-white/10 shadow-xl shadow-black/40 text-left">
+            <div id="segment-tooltip" class="hidden fixed z-[9999] pointer-events-none max-w-xs p-4 rounded-xl bg-neutral-900/95 backdrop-blur border border-white/10 shadow-xl shadow-black/40 text-left transition-opacity duration-200" style="left: 0px; top: 0px; opacity: 0;">
                 <p id="segment-tooltip-title" class="font-semibold text-white mb-1 text-sm"></p>
                 <p id="segment-tooltip-desc" class="text-white/70 text-xs leading-relaxed"></p>
-                <a href="#produtos" class="group inline-flex items-center mt-2 text-xs font-semibold text-primary tracking-wide">
-                        <span class="relative">
-                            <span class="pr-0.5">Saiba mais</span>
-                        
-                        </span>
-                    <svg class="w-3.5 h-3.5 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
                 </a>
             </div>
 
@@ -1462,6 +1456,18 @@
         @keyframes modalOut { from { opacity: 1; transform: translateY(0) scale(1); } to { opacity: 0; transform: translateY(6px) scale(.985); } }
         .video-modal-card { box-shadow: 0 40px 110px rgba(2,6,23,0.6); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; overflow: hidden; }
         @media (prefers-reduced-motion: reduce) { .video-modal-enter, .video-modal-leave { animation: none; } }
+        
+        /* Tooltip styles for better visibility */
+        #segment-tooltip {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        #segment-tooltip.hidden {
+            display: none !important;
+        }
+        #segment-tooltip:not(.hidden) {
+            display: block !important;
+        }
     </style>
 
     <script>
@@ -1634,11 +1640,91 @@
         render();
         if(toggleBtn) toggleBtn.addEventListener('click', ()=>{ expanded=!expanded; render(); });
         if(!tooltip) return;
-        function pos(x,y){ const pad=16; tooltip.style.opacity=1; const r=tooltip.getBoundingClientRect(); let L=x+12,T=y+12; if(L+r.width+pad>innerWidth) L=x-r.width-12; if(T+r.height+pad>innerHeight) T=y-r.height-12; tooltip.style.transform=`translate(${L}px,${T}px)`; }
-        let hideTo;
-        chipsContainer.addEventListener('pointerover',e=>{const c=e.target.closest('.segment-chip'); if(!c) return; clearTimeout(hideTo); ttTitle.textContent=c.dataset.name; ttDesc.textContent=c.dataset.desc; tooltip.classList.remove('hidden'); pos(e.clientX,e.clientY);});
-        chipsContainer.addEventListener('pointermove',e=>{ if(!tooltip.classList.contains('hidden')) pos(e.clientX,e.clientY); });
-        chipsContainer.addEventListener('pointerout',e=>{ if(!e.relatedTarget || !e.relatedTarget.closest('.segment-chip')) hideTo=setTimeout(()=>tooltip.classList.add('hidden'),120); });
+        
+        let hideTimeout;
+        
+        function showTooltip(chip, x, y) {
+            clearTimeout(hideTimeout);
+            ttTitle.textContent = chip.dataset.name;
+            ttDesc.textContent = chip.dataset.desc;
+            tooltip.classList.remove('hidden');
+            positionTooltip(x, y);
+            tooltip.style.opacity = '1';
+        }
+        
+        function hideTooltip() {
+            hideTimeout = setTimeout(() => {
+                tooltip.style.opacity = '0';
+                tooltip.classList.add('hidden');
+            }, 100);
+        }
+        
+        function positionTooltip(x, y) {
+            const pad = 16;
+            // Force the tooltip to be visible first to get accurate measurements
+            tooltip.style.display = 'block';
+            tooltip.style.visibility = 'hidden';
+            
+            const rect = tooltip.getBoundingClientRect();
+            let left = x + 12;
+            let top = y - rect.height - 12; // Position above cursor by default
+            
+            // Check boundaries and adjust
+            if (left + rect.width + pad > window.innerWidth) {
+                left = x - rect.width - 12;
+            }
+            if (left < pad) {
+                left = pad;
+            }
+            if (top < pad) {
+                top = y + 12; // If no space above, position below
+            }
+            if (top + rect.height + pad > window.innerHeight) {
+                top = window.innerHeight - rect.height - pad;
+            }
+            
+            tooltip.style.left = left + 'px';
+            tooltip.style.top = top + 'px';
+            tooltip.style.transform = 'none';
+            tooltip.style.visibility = 'visible';
+        }
+        
+        // Event delegation for better performance
+        chipsContainer.addEventListener('mouseover', function(e) {
+            const chip = e.target.closest('.segment-chip');
+            if (chip) {
+                showTooltip(chip, e.clientX, e.clientY);
+            }
+        });
+        
+        chipsContainer.addEventListener('mousemove', function(e) {
+            const chip = e.target.closest('.segment-chip');
+            if (chip && !tooltip.classList.contains('hidden')) {
+                positionTooltip(e.clientX, e.clientY);
+            }
+        });
+        
+        chipsContainer.addEventListener('mouseout', function(e) {
+            const chip = e.target.closest('.segment-chip');
+            if (chip) {
+                hideTooltip();
+            }
+        });
+        
+        // Hide tooltip on scroll
+        window.addEventListener('scroll', function() {
+            if (!tooltip.classList.contains('hidden')) {
+                tooltip.style.opacity = '0';
+                tooltip.classList.add('hidden');
+            }
+        });
+        
+        // Hide tooltip when clicking outside
+        document.addEventListener('click', function() {
+            if (!tooltip.classList.contains('hidden')) {
+                hideTooltip();
+            }
+        });
         window.addEventListener('scroll',()=>{ if(!tooltip.classList.contains('hidden')) tooltip.classList.add('hidden'); });
     })();
     </script>
