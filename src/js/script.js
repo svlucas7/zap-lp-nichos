@@ -475,28 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sessionStorage.setItem('whatsapp-engagement-shown', 'true');
     }
 
-    // Debug RD Station Form
-    function checkRDStationForm() {
-        const formContainer = document.getElementById('lp-vantagens-zap-b99ebee786b6cd7646e9');
-        if (formContainer) {
-            console.log('Container do formulário encontrado:', formContainer);
-            
-            // Verificar se o formulário foi criado após alguns segundos
-            setTimeout(() => {
-                const form = formContainer.querySelector('form');
-                if (form) {
-                    console.log('Formulário RD Station carregado com sucesso');
-                } else {
-                    console.warn('Formulário RD Station não foi carregado no container');
-                }
-            }, 3000);
-        } else {
-            console.error('Container do formulário não encontrado');
-        }
-    }
-
-    // Verificar formulário após DOM carregar
-    checkRDStationForm();
+    // (Removido) Debug do formulário RD Station — não utilizado mais
 
     // Tabs widget functionality
     function initTabsWidget() {
