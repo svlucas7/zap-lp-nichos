@@ -162,7 +162,8 @@
         </div>
     </header>    <!-- Hero Section -->
     <main>
-    <section class="relative min-h-[55vh] flex items-center justify-center overflow-hidden py-8 sm:py-10 lg:py-12" style="background: linear-gradient(135deg, #231F20, #2a2628, #231F20);">
+    <!-- Hero ajustado para evitar corte do título em telas baixas/monitores diferentes -->
+    <section class="relative flex items-start justify-center overflow-visible pt-32 pb-10 sm:pt-36 sm:pb-12" style="background: linear-gradient(135deg, #231F20, #2a2628, #231F20);">
             <!-- Background Pattern -->
             <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23231F20" fill-opacity="0.25"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-60"></div>
 
@@ -180,7 +181,7 @@
                     <!-- badge removido conforme solicitado -->
 
                     <!-- Main Headline adjusted (first part white, second gradient) -->
-                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight scroll-animate" data-delay="100">
+                    <h1 class="font-extrabold leading-tight tracking-tight scroll-animate text-[clamp(2.2rem,5.5vw,3.8rem)] sm:text-[clamp(2.5rem,5vw,4rem)]" data-delay="100" style="word-break:break-word;">
                         <span class="text-white">Escolha seu nicho de atuação</span><br>
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Encontre tudo que precisar na Zap</span>
                     </h1>
@@ -188,9 +189,9 @@
             </div>
             <!-- Tooltip container for segments -->
             <!-- Scroll indicator restored -->
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-animate" data-delay="500">
+            <div class="absolute left-1/2 -translate-x-1/2 scroll-animate pointer-events-none hidden sm:block" data-delay="500" style="bottom:12px;">
                 <div class="animate-bounce">
-                    <svg class="w-7 h-7 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-white/70 drop-shadow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
                     </svg>
                 </div>
