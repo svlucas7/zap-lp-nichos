@@ -9,70 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTabsWidget();
     initAccordion();
     initVideoLoader();
-    initFacebookPixelTracking();
-    
-    // Facebook Pixel tracking helper
-    function initFacebookPixelTracking() {
-        // Adicionar rastreamento específico para links do WhatsApp
-        function enhanceWhatsAppTracking() {
-            const whatsappLinks = document.querySelectorAll('a[href*="api.whatsapp.com"], a[href*="whatsapp.com"], .whatsapp-btn');
-            
-            whatsappLinks.forEach((link, index) => {
-                link.addEventListener('click', function(e) {
-                    console.log('WhatsApp link clicado:', this.href);
-                    
-                    // Disparar evento do Facebook Pixel
-                    if (typeof fbq !== 'undefined') {
-                        fbq('track', 'Contact', {
-                            content_name: 'WhatsApp Contact',
-                            content_category: 'Contact Method'
-                        });
-                        console.log('Facebook Pixel Contact event enviado');
-                    }
-                });
-            });
-        }
-        
-        // Monitorar formulário RD Station
-        function enhanceFormTracking() {
-            // Observer para detectar quando o formulário é carregado
-            const formObserver = new MutationObserver(function(mutations) {
-                mutations.forEach(function(mutation) {
-                    if (mutation.type === 'childList') {
-                        const forms = document.querySelectorAll('form');
-                        forms.forEach(form => {
-                            if (!form.hasAttribute('data-fb-tracked')) {
-                                form.setAttribute('data-fb-tracked', 'true');
-                                
-                                form.addEventListener('submit', function(e) {
-                                    console.log('Formulário enviado:', form);
-                                    
-                                    if (typeof fbq !== 'undefined') {
-                                        fbq('track', 'Lead', {
-                                            content_name: 'Contact Form',
-                                            content_category: 'Lead Generation'
-                                        });
-                                        console.log('Facebook Pixel Lead event enviado');
-                                    }
-                                });
-                            }
-                        });
-                    }
-                });
-            });
-            
-            formObserver.observe(document.body, { childList: true, subtree: true });
-        }
-        
-        // Executar imediatamente
-        enhanceWhatsAppTracking();
-        enhanceFormTracking();
-        
-        // Re-executar após delay para elementos dinâmicos
-        setTimeout(() => {
-            enhanceWhatsAppTracking();
-        }, 3000);
-    }
+    // Pixel tracking removido
     
     // Smooth scroll for anchor links
     function initSmoothScroll() {
